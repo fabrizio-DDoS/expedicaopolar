@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Expedição Polar</title>
+      <meta name="description" content="Iniciativa brasileira de educação climática, pesquisa oceânica e preservação ambiental nas regiões polares.">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500&display=swap">
+      <style>
+:root {
+  --navy:#061a33;
+  --blue:#0b3a6e;
+  --sky:#8ec5ff;
+  --white:#fff;
+  --bg:#fff;
+  --soft:#eef4fb;
+  --fg:#061a33;
+  --mut:#4a5f78;
+  --line:#d8e3f0;
+  --r:22px;
+  --h:'Manrope','Segoe UI',system-ui,sans-serif;
+  --b:'Inter',system-ui,sans-serif;
+  --t:.45s cubic-bezier(.2,.7,.2,1);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark) {
+  :root:not([data-theme="light"]) {
+  --bg:#0a2038;
+  --soft:#0e2a49;
+  --fg:#f2f7fd;
+  --mut:#a8bcd3;
+  --line:#1d3f66;
+  color-scheme:dark}
+}
+:root[data-theme="dark"] {
+  --bg:#0a2038;
+  --soft:#0e2a49;
+  --fg:#f2f7fd;
+  --mut:#a8bcd3;
+  --line:#1d3f66;
+  color-scheme:dark}
+* {
+  box-sizing:border-box}
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:90px}
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font:400 16.5px/1.7 var(--b)}
+h1,h2,h3 {
+  font-family:var(--h);
+  line-height:1.08;
+  letter-spacing:-.025em;
+  margin:0 0 .5em}
+a {
+  color:inherit}
+.w {
+  max-width:1140px;
+  margin:auto;
+  padding:0 24px}
+p {
+  color:var(--mut);
+  max-width:66ch;
+  margin:0 0 1em}
+header {
+  position:sticky;
+  top:0;
+  z-index:30;
+  padding:calc(env(safe-area-inset-top,0px) + 10px) 14px 0}
+.bar {
+  max-width:1180px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  height:58px;
+  padding:0 10px 0 22px;
+  border-radius:99px;
+  background:rgba(6,26,51,.88);
+  backdrop-filter:blur(14px);
+  color:#fff;
+  box-shadow:0 8px 30px #061a3340}
+.logo {
+  font:800 14px var(--h);
+  letter-spacing:.18em;
+  text-decoration:none;
+  display:flex;
+  gap:8px;
+  align-items:center;
+  white-space:nowrap}
+.logo i {
+  color:var(--sky);
+  font-style:normal}
+nav {
+  display:flex;
+  gap:4px;
+  margin-left:auto}
+nav a {
+  font-size:13px;
+  text-decoration:none;
+  padding:8px 12px;
+  border-radius:99px;
+  color:#cfe0f3;
+  white-space:nowrap;
+  transition:var(--t)}
+nav a:hover {
+  background:#ffffff1a;
+  color:#fff}
+nav a.on {
+  background:#fff;
+  color:var(--navy)}
+.btn {
+  display:inline-block;
+  padding:13px 26px;
+  border-radius:99px;
+  font:700 14px var(--h);
+  text-decoration:none;
+  border:1.5px solid transparent;
+  transition:var(--t);
+  cursor:pointer}
+.btn:hover {
+  transform:translateY(-3px);
+  box-shadow:0 12px 28px #061a3338}
+.bw {
+  background:#fff;
+  color:var(--navy)}
+.bn {
+  background:var(--navy);
+  color:#fff}
+.bo {
+  border-color:currentColor}
+.cta {
+  padding:10px 18px;
+  background:var(--sky);
+  color:var(--navy)}
+#bg {
+  display:none;
+  margin-left:auto;
+  background:#ffffff1a;
+  color:#fff;
+  border:0;
+  padding:9px 16px;
+  border-radius:99px;
+  font:700 13px var(--h)}
+@media(max-width:1100px) {
+  #bg {
+  display:block}
+.cta {
+  display:none}
+nav {
+  display:none;
+  position:absolute;
+  top:calc(100% + 8px);
+  left:14px;
+  right:14px;
+  flex-direction:column;
+  background:var(--navy);
+  padding:14px;
+  border-radius:var(--r);
+  margin:0}
+nav.open {
+  display:flex}
+}
+.hero {
+  position:relative;
+  margin:-68px 0 0;
+  min-height:100vh;
+  display:flex;
+  align-items:flex-end;
+  color:#fff;
+  background:linear-gradient(#0b3a6e,#061a33);
+  overflow:hidden;
+  border-radius:0 0 44px 44px}
+.hero svg {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%}
+.hero:after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(transparent 35%,#061a33e6)}
+.hero .w {
+  position:relative;
+  z-index:2;
+  padding-bottom:90px}
+.hero h1 {
+  font-size:clamp(42px,8.5vw,104px);
+  margin:0 0 10px}
+.hero h2 {
+  font-size:clamp(20px,3vw,34px);
+  font-weight:500;
+  color:var(--sky)}
+.hero p {
+  color:#dbe8f6;
+  font-size:18px}
+.pill {
+  display:inline-block;
+  border:1px solid #ffffff55;
+  border-radius:99px;
+  padding:6px 16px;
+  font-size:13px;
+  margin-bottom:22px;
+  background:#ffffff14}
+.sc {
+  position:absolute;
+  bottom:26px;
+  left:50%;
+  width:22px;
+  height:36px;
+  border:1.5px solid #fff9;
+  border-radius:99px;
+  z-index:2}
+.sc:after {
+  content:"";
+  position:absolute;
+  left:9px;
+  top:7px;
+  width:3px;
+  height:7px;
+  background:#fff;
+  border-radius:3px;
+  animation:d 1.8s infinite}
+@keyframes d {
+  50% {
+  transform:translateY(10px);
+  opacity:.2}
+}
+.s {
+  padding:100px 0}
+.dk {
+  background:var(--navy);
+  color:#fff;
+  --mut:#b4c8de;
+  --line:#1d3f66}
+.dk .card {
+  background:#0c2b52}
+.dk p {
+  color:#b4c8de}
+.dk .k {
+  color:var(--sky)}
+.k {
+  font:500 12px var(--b);
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--blue);
+  display:block;
+  margin-bottom:12px}
+h2 {
+  font-size:clamp(30px,4.4vw,50px)}
+.rv {
+  opacity:0;
+  transform:translateY(26px);
+  transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in {
+  opacity:1;
+  transform:none}
+@media(prefers-reduced-motion:reduce) {
+  .rv {
+  opacity:1;
+  transform:none;
+  transition:none}
+html {
+  scroll-behavior:auto}
+}
+.split {
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:56px;
+  align-items:center}
+@media(max-width:820px) {
+  .split {
+  grid-template-columns:1fr;
+  gap:30px}
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+.grid.g1 {
+  grid-template-columns: 1fr !important;
+}
+.g3 {
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card {
+  background:var(--soft);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  padding:28px;
+  transition:var(--t)}
+.card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px #0b3a6e24;
+  border-color:var(--sky)}
+.card h3 {
+  font-size:21px}
+.card p {
+  font-size:15px;
+  margin:0 0 .6em}
+.card .ic {
+  width:46px;
+  height:46px;
+  border-radius:14px;
+  background:var(--navy);
+  color:var(--sky);
+  display:grid;
+  place-items:center;
+  font:800 17px var(--h);
+  margin-bottom:16px}
+.dk .card .ic {
+  background:var(--sky);
+  color:var(--navy)}
+.stats {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:16px}
+.st {
+  border-radius:var(--r);
+  padding:26px;
+  background:#0c2b52;
+  border:1px solid var(--line)}
+.st b {
+  display:block;
+  font:800 clamp(38px,5vw,58px) var(--h);
+  color:var(--sky);
+  line-height:1}
+.st small {
+  color:#b4c8de}
+.vis {
+  border-radius:30px;
+  aspect-ratio:4/3;
+  background:linear-gradient(150deg,#0b3a6e,#061a33);
+  position:relative;
+  overflow:hidden}
+.vis svg {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%}
+.tl {
+  border-left:2px solid var(--line);
+  margin-left:10px;
+  padding-left:28px}
+.tl div {
+  position:relative;
+  padding-bottom:26px}
+.tl div:before {
+  content:"";
+  position:absolute;
+  left:-36px;
+  top:7px;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:var(--sky);
+  border:3px solid var(--navy)}
+.tl h3 {
+  font-size:18px;
+  margin-bottom:4px}
+.q {
+  font:700 clamp(22px,3vw,34px)/1.25 var(--h);
+  max-width:28em}
+.pg {
+  padding:150px 0 70px;
+  margin-top:-68px;
+  background:linear-gradient(160deg,#061a33,#0b3a6e);
+  color:#fff;
+  border-radius:0 0 44px 44px}
+.pg h1 {
+  font-size:clamp(38px,6vw,70px)}
+.pg p {
+  color:#c9dbef;
+  font-size:18px}
+.av {
+  width:64px;
+  height:64px;
+  border-radius:20px;
+  background:linear-gradient(135deg,#0b3a6e,#061a33);
+  color:var(--sky);
+  display:grid;
+  place-items:center;
+  font:800 20px var(--h);
+  margin-bottom:16px}
+.tag {
+  display:inline-block;
+  font-size:12px;
+  border-radius:99px;
+  padding:3px 12px;
+  background:var(--navy);
+  color:#fff;
+  margin:0 6px 6px 0}
+.dk .tag {
+  background:var(--sky);
+  color:var(--navy)}
+.note {
+  border-radius:16px;
+  border:1px dashed var(--sky);
+  padding:14px 18px;
+  font-size:14px;
+  color:var(--mut);
+  margin:0 0 24px;
+  background:var(--soft)}
+.src {
+  font-size:13px;
+  color:var(--mut)}
+.src a {
+  color:var(--blue);
+  word-break:break-all}
+.cols {
+  columns:2 340px;
+  gap:30px}
+details {
+  border-bottom:1px solid var(--line);
+  padding:16px 0}
+summary {
+  cursor:pointer;
+  font:700 17px var(--h)}
+footer {
+  background:var(--navy);
+  color:#b4c8de;
+  padding:70px 0 30px;
+  font-size:14.5px;
+  border-radius:44px 44px 0 0;
+  margin-top:40px}
+footer h3 {
+  color:#fff;
+  font-size:13px;
+  letter-spacing:.14em;
+  text-transform:uppercase}
+footer a {
+  display:block;
+  text-decoration:none;
+  padding:3px 0;
+  transition:var(--t)}
+footer a:hover {
+  color:#fff;
+  padding-left:6px}
+footer .grid {
+  grid-template-columns:2fr 1fr 1fr}
+@media(max-width:700px) {
+  footer .grid {
+  grid-template-columns:1fr}
+.s {
+  padding:68px 0}
+}
+:focus-visible {
+  outline:3px solid var(--sky);
+  outline-offset:3px}
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.equipe-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .equipe-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .equipe-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.instagram-link {
+  display: none;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  color: #8ec5ff;
+  border: 1px solid #8ec5ff66;
+  border-radius: 50%;
+  transition: var(--t);
+  
+}
+
+.instagram-link svg {
+  width: 21px;
+  height: 21px;
+}
+
+.instagram-link:hover {
+  background: #8ec5ff;
+  color: #061a33;
+  transform: translateY(-2px);
+}
+
+body.home-page .instagram-link {
+  display: inline-flex;
+}
+
+/* Cabeçalho da página A Expedição */
+/* Imagem no cabeçalho exclusivo de A Expedição */
+body.expedicao-page #app .pg {
+  background:
+    linear-gradient(rgba(6, 26, 51, 0.35), rgba(6, 26, 51, 0.70)),
+    url("assets/images/expedicao-header.jpg") center/cover no-repeat;
+  color: #fff;
+}
+
+body.expedicao-page #app .pg h1,
+body.expedicao-page #app .pg p {
+  color: #fff;
+}
+
+.expedicao-page-header h1,
+.expedicao-page-header p {
+  color: #fff;
+}
+
+/* Fundo uniforme somente na página da Expedição */
+body.expedicao-page,
+body.expedicao-page #app {
+  background: #eef4fb;
+}
+
+/* Remove as faixas alternadas escuras desta página */
+body.expedicao-page #app .dk {
+  background: #eef4fb;
+  color: #061a33;
+}
+
+body.expedicao-page #app .dk p {
+  color: #4a5f78;
+}
+
+body.expedicao-page #app .dk .card {
+  background: #fff;
+}
+
+/* Fundo uniforme na página A Expedição */
+body.expedicao-page,
+body.expedicao-page #app {
+  background: #eef4fb;
+}
+
+body.expedicao-page #app .s,
+body.expedicao-page #app .dk {
+  background: #eef4fb;
+  color: #061a33;
+  --mut: #4a5f78;
+  --line: #d8e3f0;
+}
+
+body.expedicao-page #app .s p,
+body.expedicao-page #app .dk p {
+  color: #4a5f78;
+}
+
+body.expedicao-page #app .card {
+  background: #fff;
+  border-color: #d8e3f0;
+}
+
+body.expedicao-page #app .tl div:before {
+  border-color: #eef4fb;
+}
+
+/* Lista dos veleiros */
+.vessels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Cartão individual */
+.vessel-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+
+  background: #fff;
+  color: #061a33;
+  padding: 16px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(6, 26, 51, 0.06);
+}
+
+/* Fotografia */
+.vessel-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+/* Texto */
+.vessel-info {
+  padding: 12px 16px 12px 0;
+}
+
+.vessel-info h3 {
+  color: #061a33;
+  font-size: 2rem;
+  margin: 0 0 18px;
+}
+
+.vessel-info p {
+  color: #263d59;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 700px) {
+  .vessel-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 12px;
+  }
+
+  .vessel-card img {
+    height: 260px;
+    min-height: 260px;
+  }
+
+  .vessel-info {
+    padding: 8px;
+  }
+
+  .vessel-info h3 {
+    font-size: 1.6rem;
+  }
+}
+
+.cell-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.cell-link:hover {
+  transform: translateY(-4px);
+  transition: transform 0.2s ease;
+}
+
+.cell-link .card {
+  height: 100%;
+  cursor: pointer;
+}
+
+.page-header-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.page-header-text {
+  flex: 1;
+}
+
+.header-shortcuts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 16px;
+  flex: 1.2;
+}
+
+.header-shortcut {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 170px;
+  padding: 22px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.header-shortcut:hover {
+  background: rgba(255,255,255,0.22);
+  transform: translateY(-5px);
+}
+
+.header-shortcut span {
+  color: #8ec5ff;
+  font-size: 13px;
+}
+
+.header-shortcut h2 {
+  font-size: 21px;
+  margin: 15px 0 5px;
+}
+
+.header-shortcut p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Celulares */
+@media (max-width: 800px) {
+  .page-header-layout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-shortcuts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.grid.g5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .grid.g5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .grid.g5 {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.crew-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.crew-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.crew-photo {
+  width: 130px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .crew-card {
+    gap: 12px;
+  }
+
+  .crew-photo {
+    width: 90px;
+    height: 110px;
+  }
+}
+
+
+.route-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.route-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.route-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .route-card {
+    gap: 10px;
+  }
+
+  .route-photo {
+    width: 90px;
+    height: 120px;
+  }
+}
+
+
+.equipe-foto {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+
+.org-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.org-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.org-photos {
+  width: 500px;
+  flex-shrink: 0;
+}
+
+.org-photos img {
+  display: block;
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .org-card {
+    gap: 12px;
+  }
+
+  .org-photos {
+    width: 110px;
+  }
+
+  .org-photos img {
+    height: 120px;
+  }
+}
+
+.org-photos-square {
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+}
+
+.org-photos-square img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .org-photos-square {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+
+.about-layout {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.about-photo {
+  width: 280px;
+  height: 280px;
+  flex-shrink: 0;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .about-layout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .about-photo {
+    width: 100%;
+    height: 280px;
+  }
+}
+
+
+.context-layout {
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.context-layout .about-text {
+  flex: 1;
+}
+
+.context-photo {
+  width: 420px;
+  height: 200px;
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+.context-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .context-layout {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .context-photo {
+    width: 100%;
+    height: 320px;
+  }
+}
+
+
+
+.organizer-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.organizer-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.organizer-photo {
+  width: 320px;
+  height: 280px;
+  flex-shrink: 0;
+}
+
+.organizer-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .organizer-layout {
+    flex-direction: column;
+  }
+
+  .organizer-photo {
+    width: 100%;
+    height: 280px;
+  }
+}
+
+
+
+.sponsor-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.sponsor-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+}
+
+.sponsor-card h3 {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .sponsor-card img {
+    height: 130px;
+  }
+}
+
+.apoio-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+.apoio-grid img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 700px) {
+    .apoio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.realizacao-fotos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.realizacao-fotos img {
+    width: 230px;
+    height: 130px;
+    object-fit: contain;
+    border-radius: 18px;
+}
+
+@media (max-width: 700px) {
+    .realizacao-fotos {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .realizacao-fotos img {
+        width: 95px;
+        height: 95px;
+        border-radius: 14px;
+    }
+}
+
+</style>
+    </head>
+    <body>
+      <header>
+        <div class="bar">
+          <a class="logo" href="#home" aria-label="Expedição Polar, início">
+            <img
+              src="assets/images/compasss.png"
+              alt=""
+              width="30"
+              height="30"
+              style="object-fit:contain">EXPEDIÇÃO <i>POLAR</i>
+          </a>
+          <button id="bg" aria-expanded="false" aria-controls="menu">Menu</button>
+            <nav id="menu" aria-label="Principal">
+            </nav>
+            <a class="btn cta" href="#diario">Acompanhe a Expedição</a>
+            <a class="instagram-link"
+              href="https://www.instagram.com/expedicaopolar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram da Expedição Polar"
+              title="Siga a Expedição Polar no Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"
+                      fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4"
+                        fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="17.5" cy="6.8" r="1.2" fill="currentColor"/>
+              </svg>
+            </a>
+            </div>
+          </header>
+          <main id="app">
+          </main>
+          <footer>
+            <div class="w">
+              <div class="grid">
+                <div>
+                  <a class="logo" href="#home" style="color:#fff;padding:0 0 12px">EXPEDIÇÃO <i>POLAR</i>
+                  </a>
+                  <p>Iniciativa brasileira que conecta educação climática, pesquisa oceânica e preservação ambiental.</p>
+                  </div>
+                  <div>
+                    <h3>Páginas</h3>
+                      <span id="fl">
+                      </span>
+                    </div>
+                    <div>
+                      <h3>Contato</h3>
+                        <a href="mailto:conservacao@expedicaopolar.org">conservacao@expedicaopolar.org</a>
+                          <a href="https://expedicaopolar.org/" rel="noopener">expedicaopolar.org</a>
+                            <span>Instagram: @expedicaopolar</span>
+                            </div>
+                          </div>
+                          <p style="margin-top:36px;font-size:12.5px;color:#7f98b3">© Expedição Polar 2027. Política de privacidade e créditos de fotografia: a fornecer.</p>
+                          </div>
+                        </footer>
+                        <script>
+                          const T=[['expedicao','A Expedição'],['ciencia','Ciência e Pesquisa'],['vida-polar','Vida Polar'],['diario','Diário de Bordo'],['equipe','Nossa Equipe'],['conservacao','Conservação'],['parceiros','Realização']];
+                          const sky=`<svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                          <defs>
+                            <linearGradient id="a" x1="0" y1="0" x2="0" y2="1">
+                              <stop offset="0" stop-color="#0d4580"/>
+                              <stop offset="1" stop-color="#061a33"/>
+                            </linearGradient>
+                          </defs>
+                          <rect width="1200" height="700" fill="url(#a)"/>
+                          <circle cx="930" cy="190" r="80" fill="#8ec5ff" opacity=".13"/>
+                          <path d="M0 470L170 320l100 90 130-160 160 220 110-100 150 140 130-180 130 170 120-120v420H0z" fill="#fff" opacity=".13"/>
+                          <path d="M0 530L210 390l120 100 150-120 180 160 130-80 170 130 150-110 190 100v200H0z" fill="#fff" opacity=".24"/>
+                          <rect y="530" width="1200" height="170" fill="#061a33" opacity=".8"/>
+                          <path d="M455 530h130l-14-22h-100zM520 508V420l50 70h-50zM512 508V440l-38 62z" fill="#fff"/>
+                        </svg>`;
+                        const bird=`<img
+                          class="hero-photo"
+                          src="assets/images/logoespedicao.jpeg"
+                          alt="Expedição Polar">`;
+                          const cd=(ic,t,p,l)=>`<article class="card rv">
+                          <div class="ic">${ic}</div>
+                            <h3>${t}</h3>
+                              <p>${p}</p>${l?`<a href="${l}" style="color:var(--blue);font-weight:500;font-size:14px">Saiba mais →</a>`:''}</article>`;
+                                const dkl=(c)=>c; const S=(c,k,h,b)=>`<section class="s ${c}">
+                                <div class="w">
+                                  <span class="k rv">${k}</span>
+                                    <h2 class="rv">${h}</h2>${b}</div>
+                                    </section>`;
+                                    const P=(t,l,b)=>`<div class="pg">
+                                      <div class="w">
+                                        <div class="page-header-layout">
+                                          <div class="page-header-text">
+                                            <span class="k" style="color:#8ec5ff">Expedição Polar 2027</span>
+                                            <h1>${t}</h1>
+                                            <p>${l}</p>
+                                          </div>
+
+                                          ${t === 'Diário de Bordo' ? `
+                                            <div class="header-shortcuts">
+                                              <a href="LINK_LOCALIZACAO" target="_blank" class="header-shortcut">
+                                                <span>01</span>
+                                                <h2>Localização</h2>
+                                                <p>Acompanhe a expedição</p>
+                                              </a>
+
+                                              <a href="LINK_DADOS_CIENTIFICOS" target="_blank" class="header-shortcut">
+                                                <span>02</span>
+                                                <h2>Dados científicos</h2>
+                                                <p>Explore os resultados</p>
+                                              </a>
+                                            </div>
+                                          ` : ''}
+
+                                          ${t === 'Realização' ? `
+                                            <div class="realizacao-fotos">
+                                              <img src="assets/images/logoaleixo.jpg" alt="Logo 1">
+                                              <img src="assets/images/green.jpg" alt="Logo 2">
+                                            </div>
+                                          ` : ''}
+                                        </div>
+                                      </div>
+                                    </div>${b}`;
+                                      const crew=[['LI','Laura Ippolito','Coordenadora Geral','Bióloga especialista em conservação e manejo de vertebrados marinhos, com mais de 25 anos de experiência na atuação com fauna de todos os continentes do Planeta, incluindo regiões polares. Possui ampla experiência em manejo, reabilitação, conservação e pesquisa da fauna marinha, com destaque para mamíferos aquáticos. Foi bióloga responsável pelo Aquário de São Paulo durante dez anos, criou o Instituto Aquário de São Paulo, voltado à educação e conscientização ambiental, também atuou como coordenadora-geral do Projeto de Monitoramento de Praias da Bacia de Santos (PMP-BS). Foi gerente de Operações do Instituto Mar, desenvolvendo atividades de conservação da biodiversidade marinha, pesquisa e reabilitação de fauna. Leciona em cursos de pós-graduação, é velejadora e coordenadora geral da Expedição Polar Ártico e Antártica 2027.','assets/images/lauramain.png'],
+                                      ['MH','Marcos Hurodovich','Navegador e idealizador','Capitão com experiência comprovada em expedições polares. Navegou o equivalente a três voltas ao mundo, com foco em rotas extremas como a Passagem de Drake, projetista especialista em sistemas elétricos navais, construtor naval atuando na concepção e operação de projetos de pesquisa ecológica sempre alinhando performance, segurança e sustentabilidade. Marcos reúne experiência prática em navegação, construção e preparação de veleiros para expedições extremas. São conhecimentos especialmente relevantes para quem pretende navegar em águas polares. Como parceiro de Amyr Klink participou da construção do veleiro Paratii e integrou expedições comandadas por Amyr. Publicou em 2025 seu livro "Expedição Kotik" onde destaca suas três últimas viagens ao Polo Sul. Expedições anteriores lideradas por Hurodovich resultaram também na criação de documentários para o YouTube.','assets/images/hudo.png'],
+                                      ['CB','Conrado Bertoluzzi','Coordenador Adjunto','Profissional com atuação destacada na área de sustentabilidade, sendo atualmente vinculado ao Instituto Via Green. Sua trajetória acadêmica e profissional é focada no desenvolvimento de soluções sustentáveis e gestão ambiental. Especialista em Sustentabilidade e ESG (Environmental, Social, and Governance), tem como foco a implementação de estratégias para mitigação de impactos ambientais e promoção da economia verde.','assets/images/conr.png'],
+                                      ['AB','Aleixo Belov','Navegador e idealizador','Aleixo Belov é um dos maiores nomes da história da vela oceânica brasileira. Nascido na Ucrânia, em 1943, Belov construiu uma trajetória extraordinária como navegador, realizando grandes expedições marítimas e circunavegações pelo mundo. Sua conquista mais recente é impressionante: em 28 de fevereiro de 2026, aos 83 anos, Belov retornou a Salvador depois de completar sua sexta volta ao mundo, a bordo do Veleiro Escola Fraternidade. Também realizou três voltas ao mundo sozinho, no veleiro Três Marias, coordenou as expedições com jovens brasileiros no veleiro Fraternidade, além disso também realizou navegações: pela Antártica, fez a Passagem Noroeste (Ártico canadense) a Passagem Nordeste, e foi o capitão da primeira embarcação das Américas a completar a Passagem Nordeste (Ártico russo), segundo a Marinha do Brasil','assets/images/aleixo.jpg'],
+                                      ['LN','Larissa Nabuco Nogueira','Coordenadora Executiva','Oceanógrafa, pesquisadora e diretora executiva da Fundação Aleixo Belov e do Museu do Mar Aleixo Belov, em Salvador (BA). Tem doutorado em Oceanografia Física na UFBA, participou da expedição de Aleixo Belov a bordo do veleiro Fraternidade, realizando a Passagem Noroeste, pelo Alasca e norte do Canadá, permaneceu aproximadamente dez meses no mar, percorrendo mais de 20 mil milhas náuticas, recebeu a medalha e o diploma Amigo da Marinha em novembro de 2024 e assumiu a diretoria cultural da SOAMAR Bahia no biênio 2025–2027.','assets/images/larissa.png'],
+                                      ['FE','Francyne Elias-Piera','Bióloga marinha e comunicadora científica','é uma bióloga marinha, pesquisadora e comunicadora científica brasileira, amplamente reconhecida por seu trabalho de conscientização sobre a Antártica e as mudanças climáticas. É Doutora em Ciência Ambiental e Oceanografia Biológica. É especialista em ecologia antártica e biologia marinha. Já esteve no continente antártico em cinco ocasiões para realizar pesquisas científicas.','assets/images/francine.png'],
+                                      ['MT','Marcelo Telles','Velejador e oceanógrafo','Velejador especialista em palestras motivacionais com foco na preservação da natureza. Oceanógrafo (FURG) e com uma paixão inabalável pelos oceanos e ecossistemas marinhos, sua trajetória como velejador e defensor do meio ambiente o levou a uma jornada de conscientização ecológica e cultural ao redor do mundo. Telles desenvolveu sua tese de mestrado com recifes em Abrolhos-BA .Sempre comprometido em contribuir com a ciência e a preservação ambiental, ele é o fundador e presidente do Instituto Gaia Soul, uma organização que tem a missão de informar, sensibilizar e engajar as pessoas na conservação da natureza','assets/images/marcelo.png']];
+                                      const V={};
+                                      V.home=`<section class="hero"><video
+                                          class="hero-photo"
+                                          autoplay
+                                          muted
+                                          loop
+                                          playsinline
+                                          preload="metadata"
+                                        >
+                                          <source src="assets/videos/main.mp4" type="video/mp4">
+                                          Seu navegador não suporta vídeos.
+                                        </video>
+                                        <div class="w">
+                                          <h1>EXPEDIÇÃO<br>POLAR</h1>
+                                            <h2>Ciência além dos limites.</h2>
+                                              <p>“Uma jornada de exploração, descoberta científica e conservação dos ecossistemas polares.”</p>
+                                                <p style="margin-top:26px">
+                                                  <a class="btn bw" href="#expedicao">Conheça a Expedição</a>
+                                                    <a class="btn bo" href="#diario">Explore o Diário de Bordo</a>
+                                                    </p>
+                                                  </div>
+                                                </div>
+                                                <i class="sc">
+                                                </i>
+                                              </section>
+                                              ${S('','A missão','Transformar conhecimento em consciência e ação.',`<div class="split">
+                                              <div class="rv">
+                                                <p>A Expedição Polar 2027 é uma iniciativa brasileira de educação climática, pesquisa oceânica e preservação ambiental, organizada pela Fundação Aleixo Belov e pelo Instituto Via Green.</p>
+                                                  <p>A missão é conectar ciência, educação e sociedade para ampliar a compreensão da importância da preservação climática e oceânica, mostrando que as mudanças nos polos estão ligadas ao futuro de comunidades em todo o planeta, inclusive no Brasil.</p>
+                                                    <a class="btn bn" href="#expedicao">Descubra a Expedição</a>
+                                                    </div>
+                                                    <div class="vis rv"><img
+                                                      class="hero-photo"
+                                                      src="assets/images/frater.jpg"
+                                                      alt="Veleiro Fraternidade durante a expedição">
+                                                    </div>
+                                                    </div>`)}
+                                                    ${S('dk','Em números','A jornada em resumo',`<div class="stats rv">
+                                                    <div class="st">
+                                                      <b>9</b>
+                                                        <small>meses de expedição</small>
+                                                        </div>
+                                                        <div class="st">
+                                                          <b>2</b>
+                                                            <small>etapas: Ártico e Antártica</small>
+                                                            </div>
+                                                            <div class="st">
+                                                              <b>18</b>
+                                                                <small>meses de preparação</small>
+                                                                </div>
+                                                                <div class="st">
+                                                                  <b>2</b>
+                                                                    <small>veleiros polares de pesquisa</small>
+                                                                    </div>
+                                                                  </div>
+                                                                  <p style="margin-top:18px;font-size:13px">Dados do planejamento, sujeitos a alterações por segurança e meteorologia.</p>`)}
+                                                                    ${S('','Ciência e pesquisa','Temas investigados',`<div class="grid">${cd('01','Fauna marinha','distribuição, abundância, migração e uso de habitat; acústica e ruído subaquático; ecologia alimentar e comportamento; saúde, contaminantes e bioacumulação; genética e conectividade populacional; interações com atividades humanas.','#ciencia')}${cd('02','Oceano e clima','efeitos sobre oceanos, costas e regiões polares; acidificação, temperatura, perda de gelo marinho e circulação oceânica; interação oceano-atmosfera; ciclos biogeoquímicos e sequestro de carbono; monitoramento de indicadores ambientais.','#ciencia')}${cd('03','Ecotoxicologia','diversidade de briófitas, bactérias, algas, fungos e vírus em água, gelo, ar e sedimentos; abordagens moleculares (metagenômica, genômica, transcriptômica); funções nos ciclos biogeoquímicos; respostas à perda de gelo e às mudanças de temperatura e salinidade; biossegurança e prevenção de contaminação de amostras.','#ciencia')}${cd('04','Educação climática','projetos que produzam conteúdo educativo, documentário, ciência cidadã ou registro audiovisual científico a partir da expedição.','#conservacao')}</div>`)}
+                                                                    
+                                                                    ${S('dk','A rota','Duas etapas, dois veleiros',`
+                                                                    <div class="grid g3">
+                                                                      <div class="card rv route-card">
+                                                                        <div class="route-info">
+                                                                          <div class="ic">N</div>
+                                                                          <h3>Ártico · Veleiro Escola Fraternidade</h3>
+                                                                          <p>De março a novembro de 2027, com saída de Salvador. Travessia do Atlântico, pesquisa no Ártico e retorno.</p>
+                                                                        </div>
+                                                                        <img class="route-photo" src="assets/images/pole.jpg" alt="Veleiro navegando no Ártico">
+                                                                      </div>
+
+                                                                      <div class="card rv route-card">
+                                                                        <div class="route-info">
+                                                                          <div class="ic">S</div>
+                                                                          <h3>Antártica · Veleiro Rapa Nui</h3>
+                                                                          <p>Prevista para dezembro de 2027, sujeita a validação operacional, segurança e autorizações.</p>
+                                                                        </div>
+                                                                        <img class="route-photo" src="assets/images/antartica.jpg" alt="Veleiro navegando na Antártica">
+                                                                      </div>
+                                                                    </div>
+                                                                    `)}
+
+                                                                              ${S('','Diário de bordo','Acompanhe a preparação',`<p class="rv">Durante a navegação, a equipe compartilhará registros e conteúdos educativos conforme a conectividade e a segurança permitirem. Siga <b>@expedicaopolar</b> ou acompanhe o diário aqui.</p>
+                                                                              <a class="btn bn" href="#diario">Ver diário de bordo</a>`)}
+                                                                                ${S('dk','Vida polar','A viajante dos dois polos',`<div class="split">
+                                                                                <div class="vis rv" style="aspect-ratio:4/3">${bird}</div>
+                                                                                  <div class="rv">
+                                                                                    <p>O logotipo homenageia o trinta-réis-ártico (<i>Sterna paradisaea</i>), que migra anualmente do Ártico à Antártica e pode realizar o maior deslocamento sazonal entre os animais.</p>
+                                                                                      <a class="btn bw" href="#vida-polar">Conheça a espécie</a>
+                                                                                      </div>
+                                                                                    </div>`)}
+                                                                                    
+                                                                                          ${S('','Equipe e instituições','Quem está à frente',`
+                                                                                            <div class="grid equipe-grid">
+                                                                                              ${crew.slice(0,5).map(c=>`
+                                                                                                <div class="card rv">
+                                                                                                  <img class="equipe-foto" src="${c[4]}" alt="${c[1]}">
+                                                                                                  <h3>${c[1]}</h3>
+                                                                                                  <p>${c[2]}</p>
+                                                                                                </div>
+                                                                                              `).join('')}
+                                                                                            </div>
+                                                                                            <p style="margin-top:24px">
+                                                                                              <a class="btn bn" href="#equipe">Ver toda a equipe</a>
+                                                                                            </p>
+                                                                                          `)}
+
+                                                                                          
+                                                                                          ${S('dk','Realização','Organizadores',`
+                                                                                          <div class="grid g1">
+                                                                                            <div class="card rv org-card">
+                                                                                              <div class="org-info">
+                                                                                                <h3>Fundação Aleixo Belov</h3>
+                                                                                                <p>Instituição cultural, educativa e socioambiental criada em 2019, em Salvador (BA).</p>
+                                                                                              </div>
+                                                                                              <div class="org-photos">
+                                                                                                <img src="assets/images/logoaleixo.jpg" alt="Fundação Aleixo Belov">
+                                                                                              </div>
+                                                                                            </div>
+
+                                                                                            <div class="card rv org-card">
+                                                                                              <div class="org-info">
+                                                                                                <h3>Instituto Via Green</h3>
+                                                                                                <p>Organização da sociedade civil sediada em Santos (SP), com foco em sustentabilidade, clima e descarbonização.</p>
+                                                                                              </div>
+                                                                                              <div class="org-photos-square">
+                                                                                                <img src="assets/images/green.jpg" alt="Instituto Via Green">
+                                                                                              
+                                                                                              </div>
+                                                                                            </div>
+                                                                                          </div>
+
+                                                                                          <p style="margin-top:24px">
+                                                                                            <a class="btn bw" href="#parceiros">Edital e parcerias</a>
+                                                                                          </p>
+                                                                                          `)}`;
+
+                                                                                                  V.expedicao=P('A Expedição','Educação climática, pesquisa oceânica e preservação ambiental.',
+                                                                                                  
+                                                                                                                S('','','O que é?',`
+                                                                                                                <div class="about-layout">
+                                                                                                                  <div class="about-text">
+                                                                                                                    <p class="rv">
+                                                                                                                      A Expedição Polar 2027 é uma iniciativa brasileira de educação climática, pesquisa oceânica e preservação ambiental. Organizada pela Fundação Aleixo Belov e pelo Instituto Via Green, a expedição conecta ciência, educação e comunicação pública para aproximar estudantes e sociedade das mudanças que afetam as regiões polares e os oceanos.
+                                                                                                                    </p>
+
+                                                                                                                    <p class="rv">
+                                                                                                                      A jornada será realizada em duas etapas: Ártico, a bordo do Veleiro Escola Fraternidade, e Antártica, a bordo do Veleiro Rapa Nui. O projeto pretende usar a experiência de campo como ponto de partida para observações científicas, produção audiovisual, conteúdos para uma plataforma educacional e atividades com escolas.
+                                                                                                                    </p>
+
+                                                                                                                    <p class="rv">
+                                                                                                                      Seu propósito é transformar conhecimento em consciência e ação coletiva. A missão é conectar ciência, educação e sociedade para ampliar a compreensão da importância da preservação climática e oceânica. O projeto busca formar pessoas capazes de reconhecer que as mudanças nos oceanos e nas regiões polares estão ligadas ao futuro de comunidades em todo o planeta, inclusive no Brasil.
+                                                                                                                    </p>
+                                                                                                                  </div>
+
+                                                                                                                  <div class="about-photo">
+                                                                                                                    <img src="assets/images/narvs.png" alt="Expedição Polar 2027">
+                                                                                                                  </div>
+                                                                                                                </div>
+                                                                                                                `)+
+
+                                                                                                                
+                                                                                                              S('dk','As duas etapas','Ártico - Veleiro Escola Fraternidade',`
+                                                                                                              <div class="about-layout">
+                                                                                                                <div class="about-text">
+                                                                                                                  <p>A etapa ártica está planejada para 2027, entre março e novembro, a bordo do Veleiro Escola Fraternidade. A proposta marca o retorno de Aleixo Belov ao Ártico, após a expedição brasileira anterior à região. A missão de 2027 amplia esse percurso com foco em mudanças climáticas, observação ambiental, educação e comunicação científica.</p>
+
+                                                                                                                  <p>A saída será de Salvador em março. A rota planejada tem três fases: travessia do Atlântico entre março e maio; permanência e pesquisa no Ártico entre junho e agosto, com passagem prevista por Islândia, Groenlândia e Ártico canadense; e retorno a Salvador entre agosto e outubro. As durações indicativas são de cerca de dois, três e dois meses, respectivamente. Rota, portos e datas podem mudar por meteorologia, condições de navegação e gelo, sempre sob decisão do comandante por segurança. Serão sete meses de expedição.</p>
+
+                                                                                                                  <div class="tl rv">
+                                                                                                                    <div>
+                                                                                                                      <h3>Março a maio · Travessia do Atlântico</h3>
+                                                                                                                      <p>Cerca de dois meses.</p>
+                                                                                                                    </div>
+                                                                                                                    <div>
+                                                                                                                      <h3>Junho a agosto · Pesquisa no Ártico</h3>
+                                                                                                                      <p>Cerca de três meses, com passagem prevista por Islândia, Groenlândia e Ártico canadense.</p>
+                                                                                                                    </div>
+                                                                                                                    <div>
+                                                                                                                      <h3>Agosto a outubro · Retorno a Salvador</h3>
+                                                                                                                      <p>Cerca de dois meses.</p>
+                                                                                                                    </div>
+                                                                                                                  </div>
+                                                                                                                </div>
+
+                                                                                                                <div class="about-photo">
+                                                                                                                  <img src="assets/images/Fraternidade gelo.jpg" alt="Veleiro Escola Fraternidade no Ártico">
+                                                                                                                </div>
+                                                                                                              </div>
+                                                                                                              `) +
+                                                                                                              S('', 'Antártica · dezembro de 2027', 'Veleiro Rapa Nui', `
+                                                                                                              <div class="about-layout">
+                                                                                                                <div class="about-text">
+                                                                                                                  <p>A etapa antártica está prevista para dezembro de 2027, a bordo do Veleiro Rapa Nui. A viagem dará continuidade ao propósito de aproximar o público da ciência polar e da relação entre oceano, clima e biodiversidade. Itinerário, datas, duração e atividades de campo dependem da validação operacional, das condições ambientais, da segurança e das autorizações aplicáveis.</p>
+                                                                                                                </div>
+
+                                                                                                                <div class="about-photo">
+                                                                                                                  <img src="assets/images/IMG-20261006-WA0044.jpg" alt="Veleiro Rapa Nui na Antártica">
+                                                                                                                </div>
+                                                                                                              </div>
+                                                                                                              `) +
+
+                                                                                                                    S('dk', 'Os veleiros', 'Embarcações', `
+                                                                                                                      <div class="vessels-list">
+
+                                                                                                                        <div class="vessel-card rv">
+                                                                                                                          <img src="assets/images/fraternidade.jpg" alt="Veleiro Fraternidade">
+
+                                                                                                                          <div class="vessel-info">
+                                                                                                                            <h3>Fraternidade</h3>
+
+                                                                                                                            <p>O Fraternidade é apresentado como um veleiro-escola idealizado por Aleixo Belov, com vocação para formar pessoas, promover educação marítima e estimular a preservação ambiental <a href="https://www.instagram.com/reel/DFu5kAgN0CF/?hl=en" rel="noopener">[4]</a>. Sua trajetória inclui a viagem pela Passagem Noroeste em 2022, descrita pela Fundação Aleixo Belov como uma expedição de dez meses <a href="https://www.instagram.com/reel/DFu5kAgN0CF/?hl=en" rel="noopener">[4]</a>. Essa experiência de navegação em regiões remotas dá contexto à participação do barco na etapa do Ártico em 2027.</p>
+
+                                                                                                                            <p>Fraternidade é um robusto veleiro de aço, com 70 pés de comprimento, 70 toneladas, com capacidade para 12 tripulantes — foi projetado sob medida para navegar pelos oceanos mais desafiadores do planeta, incluindo as regiões polares. O FRATERNIDADE já percorreu milhares de milhas náuticas e alcançou feitos sem precedentes na história da navegação nas Américas. Nos últimos meses está sofrendo adaptações para criar uma sala exclusiva para a pesquisa científica.</p>
+                                                                                                                          </div>
+                                                                                                                        </div>
+
+                                                                                                                        <div class="vessel-card rv">
+                                                                                                                          <img src="assets/images/rapa-nui.jpg" alt="Veleiro Rapa Nui">
+
+                                                                                                                          <div class="vessel-info">
+                                                                                                                            <h3>Rapa Nui</h3>
+
+                                                                                                                            <p>O Rapa Nui é o veleiro indicado para a etapa antártica de dezembro de 2027. De alumínio com 50 pés (aprox. 15 metros) e capacidade para 8 tripulantes, foi utilizado anteriormente em viagens polares na Antártida. A embarcação foi projetada sob medida para resistir a regiões polares. O Rapa Nui é o primeiro veleiro de Amyr Klink e tem importância histórica na vela oceânica brasileira, pois está associado ao início de sua trajetória na navegação oceânica. O Capitão Marcos Hurodovich apresentou sua história e os preparativos para essa nova expedição no São Paulo Boat Show de 2026. Hoje a embarcação está passando por um processo de refit (reforma e modernização) para uma nova viagem à Antártica.</p>
+                                                                                                                          </div>
+                                                                                                                        </div>
+
+                                                                                                                      </div>
+                                                                                                                    `)+S('','Dúvidas','Perguntas frequentes',`${['Quando será a expedição?|Ártico de março a novembro de 2027; Antártica em dezembro de 2027. O calendário detalhado será divulgado após confirmação dos planos e autorizações.','Como acompanhar?|Pelo site e pelo Instagram @expedicaopolar, conforme a conectividade permitir.','Posso propor um projeto científico?|Sim, veja a página de Ciência e Pesquisa.'].map(x=>{x=x.split('|');return`<details class="rv">
+                                                                                                                    <summary>${x[0]}</summary>
+                                                                                                                      <p>${x[1]}</p>
+                                                                                                                      </details>`}).join('')}`));
+                                                                                                                      V.ciencia=P('Ciência e Pesquisa','Observação de campo, dados ambientais e divulgação após a expedição.',
+                                                                                                                      
+                                                                                                                      S('','','Temas de Pesquisa',`
+                                                                                                                      <div class="about-layout">
+                                                                                                                        <div class="about-text">
+                                                                                                                          <p class="rv">O projeto prevê uma equipe técnica e de pesquisadores a bordo, observação e documentação de fauna marinha, fotoidentificação de fauna e ambientes, registros visuais, acústicos, documentação de dados ambientais. Também estão previstos levantamentos e coleta de dados, além da produção de imagens, depoimentos, estudos e registros audiovisuais para um documentário. Os resultados e dados deverão ser analisados e apresentados após a expedição, podendo subsidiar publicações, materiais educativos e novas iniciativas.</p>
+                                                                                                                          <p class="rv">Os temas de pesquisa incluem preservação oceânica, aquecimento global, mudanças nos sistemas oceânicos, impactos climáticos globais, conservação de aves marinhas e cetáceos, ecotoxicologia, degradação ambiental, adaptação climática e microrganismos.</p>
+                                                                                                                        </div>
+                                                                                                                        <div class="about-photo">
+                                                                                                                          <img src="assets/images/RCTIC AND ANTARCTIC POLAR EXPEDITION 2027 (11).jpg" alt="Pesquisa científica marinha">
+                                                                                                                        </div>
+                                                                                                                      </div>
+                                                                                                                      `)
+                                                                                                                      +
+                                                                                                                      S('','','Educação climática',`
+                                                                                                                      <div class="about-layout">
+                                                                                                                        <div class="about-text">
+                                                                                                                          <p class="rv">A educação é um dos pilares centrais da Expedição Polar. O projeto pretende usar o Ártico como uma sala de aula viva e levar educação climática baseada em ciência a estudantes e professores. A proposta inclui comunicação científica, registros audiovisuais, atividades inclusivas, materiais didáticos, palestras, exposições, experiências imersivas e produção de documentário. Após a expedição, estão previstos compartilhamento de resultados, publicações, novos materiais, palestras gratuitas e desenvolvimento de projetos e conteúdos curriculares. A iniciativa dialoga com Cultura Oceânica, que trata da compreensão de como o oceano influencia as pessoas e de como as ações humanas influenciam o oceano. A educação deverá explicar os registros de campo em linguagem acessível, contextualizar as evidências e distinguir fatos observados, interpretações e questões ainda em estudo.</p>
+                                                                                                                        </div>
+                                                                                                                        <div class="about-photo">
+                                                                                                                          <img src="assets/images/RCTIC AND ANTARCTIC POLAR EXPEDITION 2027 (39).jpg" alt="Educação climática">
+                                                                                                                        </div>
+                                                                                                                      </div>
+                                                                                                                      `)
+                                                                                                                      +
+                                                                                                                      S('','','Edital de Projetos Científicos',`
+                                                                                                                      <div class="about-layout">
+                                                                                                                        <div class="about-text">
+                                                                                                                          <p class="rv">O edital fornecido pelos realizadores abre oportunidade para projetos científicos a bordo do Veleiro Escola Fraternidade. As inscrições estão previstas de 20 de novembro a 24 de dezembro de 2026, até 20h (horário de Brasília), pelo e-mail conservacao@expedicaopolar.org, com o assunto “PROJETO CIENTÍFICO EXPEDIÇÃO POLAR ÁRTICO 2027”. A confirmação de recebimento deve ocorrer por e-mail. Verificar nos canais oficiais se o edital e o calendário permanecem vigentes antes de publicar esta chamada.</p>
+
+                                                                                                                          <p class="rv">O edital prevê até quatro pesquisadores embarcados simultaneamente, em períodos de 7, 14, 21, 30, 45, 60 ou 90 dias, ou por toda a expedição, sujeito à seleção e à viabilidade. Também admite modalidade embarcada, coleta delegada à tripulação treinada, instrumentos autônomos e projetos de educação/comunicação. Entre as áreas previstas estão mudanças climáticas, oceanografia, regiões polares, algas, ecotoxicologia, cetáceos, microrganismos, aves marinhas e projetos interdisciplinares.</p>
+
+                                                                                                                          <p class="rv">A avaliação considera viabilidade a bordo, mérito científico, relação com mudanças climáticas, contribuição à educação e segurança. O edital informa que a seleção não inclui financiamento, bolsas ou contratação, salvo apoio expressamente previsto. Os realizadores indicam como apoio possível vaga a bordo no período aprovado, alimentação, custos de navegação, espaço e energia conforme disponibilidade e treinamento de segurança. Passagens, seguro com resgate e repatriação, equipamentos e insumos, licenças, análises de laboratório e demais despesas do projeto ficam, em regra, sob responsabilidade dos proponentes. Requisitos, apoios e obrigações devem ser consultados no edital integral.</p>
+                                                                                                                        </div>
+                                                                                                                        <div class="about-photo">
+                                                                                                                          <img src="assets/images/RCTIC AND ANTARCTIC POLAR EXPEDITION 2027 (24).jpg" alt="Projetos científicos da Expedição Polar">
+                                                                                                                        </div>
+                                                                                                                      </div>
+                                                                                                                      `)
+
+                                                                                                                      +S('','submissão de projetos','Arquivos para submissão de projetos científicos',`<div class="grid g3">
+                                                                            
+                                                                                                                     <a href="https://docs.google.com/document/d/180PHn7XOtg9hFi7N24qQzrFhAXOWmrXf/edit#heading=h.1ajqe7h84rwg" class="cell-link" target="_blank">${cd('A','Edital de Seleção de Projetos Científicos','')}</a> 
+                                                                                                                    <a href="https://docs.google.com/document/d/1sWMtainbo6pQoMwXayzaV7wuRp_xH0Qj/edit?usp=drivesdk&ouid=101648171364574256344&rtpof=true&sd=true" class="cell-link" target="_blank">${cd('B','Anexo I: Formulário de Inscrição','')}</a>
+                                                                                                                      <a href="https://docs.google.com/document/d/1wnamtwGdNCz2dPsbnOTBdX1haKWzEUl9/edit?usp=drivesdk&ouid=101648171364574256344&rtpof=true&sd=true" class="cell-link" target="_blank">${cd('C','Anexo II: Declarações do Proponente','')}</a>
+                                                                                                                      <a href="https://docs.google.com/document/d/1CtYOy3ci2R_YWr26J69mMB1ZGE_IVS3M/edit?usp=drivesdk&ouid=101648171364574256344&rtpof=true&sd=true" class="cell-link" target="_blank">${cd('D','Anexo III: Modelo de Carta de Anuência Institucional','')}</a>
+                                                                                                                      <a href="https://docs.google.com/document/d/1kcinFJF3HST8XYM2UAs6YmJXz5lQkSt8/edit?usp=drivesdk&ouid=101648171364574256344&rtpof=true&sd=true" class="cell-link" target="_blank">${cd('E','Anexo IV: Termo de Responsabilidade, Ciência de Riscos e Normas de Convivência a Bordo','')}</a>
+                                                                                                                      </div>`)
+                                                                                                                      +S('dk','Temas','Linhas de pesquisa',`<div class="rv">
+                                                                                                                        ${['Mudanças climáticas','Aquecimento global','Regiões polares','Algas marinhas','Ecotoxicologia marinha','Conservação de cetáceos','Microrganismos em ambientes polares','comunicação científica','Educação climática', 'Conservação de aves marinhas', ' Projetos interdisciplinares'].map(t=>`<span class="tag">${t}</span>`).join('')}</div>`)
+                                                                                                                      
+                                                                                                                        +S('','Exemplo','Saúde da fauna e monitoramento oceânico',`
+                                                                                                                        <div class="about-layout">
+                                                                                                                          <div class="about-text">
+                                                                                                                            <p class="rv">
+                                                                                                                              Um estudo de 2025 detectou morbillivirus de cetáceos em baleias-jubarte, cachalote e baleia-piloto no norte da Noruega, Islândia e Cabo Verde, e indicou que lacunas históricas de vigilância podem explicar parte das detecções acima do Círculo Polar Ártico, recomendando monitoramento contínuo.
+                                                                                                                            </p>
+                                                                                                                          </div>
+
+                                                                                                                          <div class="about-photo">
+                                                                                                                            <img src="assets/images/RCTIC AND ANTARCTIC POLAR EXPEDITION 2027 (20).jpg" alt="Baleia em ambiente oceânico">
+                                                                                                                          </div>
+                                                                                                                        </div>
+                                                                                                                        `)
+                                                                                                                        );
+                                                                                                                      V['vida-polar']=P('Vida Polar','E sua Biodiversidade.',S('','Espécie símbolo','Trinta-réis-ártico (<i>Sterna paradisaea</i>)',`<div class="split">
+                                                                                                                      <div class="rv">
+                                                                                                                        <p>O trinta-réis-ártico ou andorinha-do-Ártico (Sterna paradisaea) é conhecida por realizar uma das maiores migrações do reino animal: viaja anualmente do Ártico à Antártica e retorna, acompanhando o verão em ambos os hemisférios.</p>
+                                                                                                                          <p>Apesar de seu pequeno porte, por volta de 125 g, dados provenientes de anilhamento e levantamentos realizados em alto-mar sugerem que sua migração anual partindo de áreas de reprodução nas regiões boreais e no alto Ártico em direção ao Oceano Antártico pode ser o deslocamento sazonal mais longo realizado por qualquer animal.</p>
+                                                                                                                          <p>A andorinha-do-Ártico percorre aproximadamente:
+                                                                                                                                    50 mil km por ano em algumas populações.
+                                                                                                                                    Mais de 80 mil km anuais em indivíduos rastreados por geolocalizadores.
+                                                                                                                                    Registros de até aproximadamente 30 anos de vida
+                                                                                                                                    </p>
+                                                                                                                          </div>
+                                                                                                                          <div class="vis rv">
+                                                                                                                            <img\n class=\"hero-photo\"\n src=\"assets/images/andorinha.jpg\"\n alt=\"Expedição Polar\">
+                                                                                                                            </div>
+                                                                                                                          </div>`)+S('dk','Ciclo anual','Como acontece a migração',`<div class="tl rv">
+                                                                                                                          <div>
+                                                                                                                            <h3>Primavera e verão boreais</h3>
+                                                                                                                              <p>Chega ao Ártico para se reproduzir.</p>
+                                                                                                                              </div>
+                                                                                                                              <div>
+                                                                                                                                <h3>Final do verão boreal</h3>
+                                                                                                                                  <p>Inicia a migração para o sul.</p>
+                                                                                                                                  </div>
+                                                                                                                                  <div>
+                                                                                                                                    <h3>Verão austral</h3>
+                                                                                                                                      <p>Permanece no Oceano Austral e na região antártica.</p>
+                                                                                                                                      </div>
+                                                                                                                                      <div>
+                                                                                                                                        <h3>Outono austral</h3>
+                                                                                                                                          <p>Começa o retorno ao Hemisfério Norte.</p>
+                                                                                                                                          </div>
+                                                                                                                                        </div>`)+S('','Biologia e pesquisa','Reprodução e importância científica',`<div class="grid g3">
+                                                                                                                                          ${cd('1','Reprodução','Constrói ninhos diretamente no solo. Geralmente deposita 1 a 2 ovos. Ambos os pais participam da incubação e alimentação dos filhotes. Defende agressivamente o ninho contra predadores e intrusos.')}
+                                                                                                                                          ${cd('2','Importância Científica','Conectividade ecológica entre Ártico e Antártica. Correntes oceânicas e disponibilidade de alimento. Migração, orientação e navegação animal. Monitoramento por geolocalizadores e rastreamento por satélite.')}
+                                                                                                                                          </div>
+                                                                                                                                        <p class="src" style="margin-top:20px">Referências: <a href="https://www.pnas.org/doi/10.1073/pnas.0909493107" rel="noopener">PNAS</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2836663/" rel="noopener">PMC2836663</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6745660/" rel="noopener">PMC6745660</a>
+                                                                                                                                        </p>`)+
+                                                                                                                                        S('','','Urso Polar (<i>Ursus maritimus</i>)',`<div class="split">
+                                                                                                                                            <div class="rv">
+                                                                                                                                              <p>O trinta-réis-ártico ou andorinha-do-Ártico (Sterna paradisaea) é conhecida por realizar uma das maiores migrações do reino animal: viaja anualmente do Ártico à Antártica e retorna, acompanhando o verão em ambos os hemisférios.</p>
+                                                                                                                                                <p>Apesar de seu pequeno porte, por volta de 125 g, dados provenientes de anilhamento e levantamentos realizados em alto-mar sugerem que sua migração anual partindo de áreas de reprodução nas regiões boreais e no alto Ártico em direção ao Oceano Antártico pode ser o deslocamento sazonal mais longo realizado por qualquer animal.</p>
+                                                                                                                                                <p>A andorinha-do-Ártico percorre aproximadamente:
+                                                                                                                                                          50 mil km por ano em algumas populações.
+                                                                                                                                                          Mais de 80 mil km anuais em indivíduos rastreados por geolocalizadores.
+                                                                                                                                                          Registros de até aproximadamente 30 anos de vida
+                                                                                                                                                          </p>
+                                                                                                                                                </div>
+                                                                                                                                                <div class="vis rv">
+                                                                                                                                                  <img\n class=\"hero-photo\"\n src=\"assets/images/ursopolar.jpg\"\n alt=\"Expedição Polar\">
+                                                                                                                                                  </div>
+                                                                                                                                                </div>`)+
+                                                                                                                                                S('','','Narval (<i>Monodon monoceros</i>)',`<div class="split">
+                                                                                                                                            <div class="rv">
+                                                                                                                                              <p>O trinta-réis-ártico ou andorinha-do-Ártico (Sterna paradisaea) é conhecida por realizar uma das maiores migrações do reino animal: viaja anualmente do Ártico à Antártica e retorna, acompanhando o verão em ambos os hemisférios.</p>
+                                                                                                                                                <p>Apesar de seu pequeno porte, por volta de 125 g, dados provenientes de anilhamento e levantamentos realizados em alto-mar sugerem que sua migração anual partindo de áreas de reprodução nas regiões boreais e no alto Ártico em direção ao Oceano Antártico pode ser o deslocamento sazonal mais longo realizado por qualquer animal.</p>
+                                                                                                                                                <p>A andorinha-do-Ártico percorre aproximadamente:
+                                                                                                                                                          50 mil km por ano em algumas populações.
+                                                                                                                                                          Mais de 80 mil km anuais em indivíduos rastreados por geolocalizadores.
+                                                                                                                                                          Registros de até aproximadamente 30 anos de vida
+                                                                                                                                                          </p>
+                                                                                                                                                </div>
+                                                                                                                                                <div class="vis rv">
+                                                                                                                                                  <img\n class=\"hero-photo\"\n src=\"assets/images/narval.png\"\n alt=\"Expedição Polar\">
+                                                                                                                                                  </div>
+                                                                                                                                                </div>`)+
+                                                                                                                                                S('','','Baleia da Groelândia (<i>Balaena mysticetus</i>)',`<div class="split">
+                                                                                                                                            <div class="rv">
+                                                                                                                                              <p>O trinta-réis-ártico ou andorinha-do-Ártico (Sterna paradisaea) é conhecida por realizar uma das maiores migrações do reino animal: viaja anualmente do Ártico à Antártica e retorna, acompanhando o verão em ambos os hemisférios.</p>
+                                                                                                                                                <p>Apesar de seu pequeno porte, por volta de 125 g, dados provenientes de anilhamento e levantamentos realizados em alto-mar sugerem que sua migração anual partindo de áreas de reprodução nas regiões boreais e no alto Ártico em direção ao Oceano Antártico pode ser o deslocamento sazonal mais longo realizado por qualquer animal.</p>
+                                                                                                                                                <p>A andorinha-do-Ártico percorre aproximadamente:
+                                                                                                                                                          50 mil km por ano em algumas populações.
+                                                                                                                                                          Mais de 80 mil km anuais em indivíduos rastreados por geolocalizadores.
+                                                                                                                                                          Registros de até aproximadamente 30 anos de vida
+                                                                                                                                                          </p>
+                                                                                                                                                </div>
+                                                                                                                                                <div class="vis rv">
+                                                                                                                                                  <img\n class=\"hero-photo\"\n src=\"assets/images/baleiagro.jpeg\"\n alt=\"Expedição Polar\">
+                                                                                                                                                  </div>
+                                                                                                                                                </div>`)+
+                                                                                                                                                S('','','Beluga (<i>Delphinapterus leucas</i>)',`<div class="split">
+                                                                                                                                            <div class="rv">
+                                                                                                                                              <p>O trinta-réis-ártico ou andorinha-do-Ártico (Sterna paradisaea) é conhecida por realizar uma das maiores migrações do reino animal: viaja anualmente do Ártico à Antártica e retorna, acompanhando o verão em ambos os hemisférios.</p>
+                                                                                                                                                <p>Apesar de seu pequeno porte, por volta de 125 g, dados provenientes de anilhamento e levantamentos realizados em alto-mar sugerem que sua migração anual partindo de áreas de reprodução nas regiões boreais e no alto Ártico em direção ao Oceano Antártico pode ser o deslocamento sazonal mais longo realizado por qualquer animal.</p>
+                                                                                                                                                <p>A andorinha-do-Ártico percorre aproximadamente:
+                                                                                                                                                          50 mil km por ano em algumas populações.
+                                                                                                                                                          Mais de 80 mil km anuais em indivíduos rastreados por geolocalizadores.
+                                                                                                                                                          Registros de até aproximadamente 30 anos de vida
+                                                                                                                                                          </p>
+                                                                                                                                                </div>
+                                                                                                                                                <div class="vis rv">
+                                                                                                                                                  <img\n class=\"hero-photo\"\n src=\"assets/images/beluga.jpg\"\n alt=\"Expedição Polar\">
+                                                                                                                                                  </div>
+                                                                                                                                                </div>`)
+                                                                                                                                      );
+                                                                                                                                        V.diario=P('Diário de Bordo','Preparação e etapas da expedição.',S('','Acompanhe','Relatos, imagens e conteúdos educativos',`<p class="rv">Siga <b>@expedicaopolar</b> para novidades. Durante a navegação, as publicações dependem de conectividade e segurança. Após as viagens, estão previstos resultados, materiais educacionais, publicações e documentário.</p>
+                                                                                                                                        <div class="grid g3">${['Preparação do Fraternidade','Refit do Rapa Nui','Lançamento da expedição'].map((t,i)=>`<div class="card rv">
+                                                                                                                                        <span class="tag">Em breve</span>
+                                                                                                                                          <h3>${t}</h3>
+                                                                                                                                            <p>Registro a ser publicado pela equipe.</p>
+                                                                                                                                            </div>`).join('')}</div>`));
+                                                                                                                                            
+                                                                                                                                                V.equipe=P('Nossa Equipe','Coordenação, capitães e pesquisadores.',S('','Governança','Equipe técnica',`
+                                                                                                                                                <div class="grid g1">
+                                                                                                                                                  ${crew.map(c=>`
+                                                                                                                                                    <div class="card rv crew-card">
+                                                                                                                                                      <div class="crew-info">
+                                                                                                                                                        <h3>${c[1]}</h3>
+                                                                                                                                                        <span class="tag">${c[2]}</span>
+                                                                                                                                                        <p>${c[3]||''}</p>
+                                                                                                                                                      </div>
+                                                                                                                                                      <img class="crew-photo" src="${c[4]||'images/placeholder.jpg'}" alt="${c[1]}">
+                                                                                                                                                    </div>
+                                                                                                                                                  `).join('')}
+                                                                                                                                                </div>`));
+
+                                                                                                                                                  V.conservacao=P('Conservação','O futuro dos polos é o nosso futuro.',
+                        
+                                                                                                                                                  S('','Contexto','Por que as regiões polares',`
+                                                                                                                                                  <div class="about-layout context-layout">
+                                                                                                                                                    <div class="about-text">
+                                                                                                                                                      <p class="rv">O Ártico e a Antártica são regiões importantes para compreender mudanças do clima e dos ecossistemas. O IPCC (Painel Intergovernamental sobre Mudança do Clima, ou Intergovernmental Panel on Climate Change) é o principal órgão científico internacional criado para avaliar a ciência relacionada às mudanças climáticas, avalia que as regiões polares, especialmente o Ártico e a Antártica marítima, estão entre as áreas que experimentam impactos climáticos em magnitudes e ritmos elevados. Entre as mudanças destacadas estão a perda acelerada do gelo marinho no Ártico, o degelo do permafrost e mudanças nos ecossistemas <a href="https://www.ipcc.ch/report/ar6/wg2/chapter/ccp6/" rel="noopener">[1]</a>.</p>
+
+                                                                                                                                                      <p class="rv">A NASA (Administração Nacional da Aeronáutica, ou National Aeronautics and Space Administration) informa, com base em observações de satélite, que os mantos de gelo da Antártica e da Groenlândia vêm perdendo massa; a água resultante contribui para a elevação do nível do mar <a href="https://science.nasa.gov/earth/explore/earth-indicators/ice-sheets/" rel="noopener">[2]</a>. O oceano também exerce influência importante sobre o clima, e medições de longo prazo ajudam pesquisadores a entender mudanças ambientais. A NOAA (Administração Nacional Oceânica e Atmosférica, ou National Oceanic and Atmospheric Administration) destaca a relevância de observações e informações ambientais para compreender transformações no Ártico <a href="https://arctic.noaa.gov/" rel="noopener">[3]</a>.</p>
+
+                                                                                                                                                      <p class="rv">A Expedição Polar pretende levar esse debate ao público por meio de observações de campo e educação. Um estudo publicado em 2025 analisou amostras respiratórias, biópsias e amostras de um animal encalhado, coletadas entre 2016 e 2025 em áreas de alimentação no norte da Noruega, Islândia e Cabo Verde. Os autores detectaram morbillivirus de cetáceos em dois grupos de baleias-jubarte sem sintomas aparentes, em uma baleia cachalote em más condições de saúde e em tecido renal de uma baleia-piloto encalhada. O estudo observa que a detecção acima do Círculo Polar Ártico pode refletir também lacunas históricas de vigilância, e recomenda monitoramento continuado <a href="https://link.springer.com/article/10.1186/s12917-025-05152-6" rel="noopener">[8]</a>. Esse exemplo ilustra a conexão entre saúde da fauna e monitoramento oceânico.</p>
+                                                                                                                                                    </div>
+
+                                                                                                                                                    <div class="context-photo">
+                                                                                                                                                      <img src="assets/images/out.26 EXPEDIÇÃO POLAR ÁRTICO (4).png" alt="Paisagem das regiões polares">
+                                                                                                                                                    </div>
+                                                                                                                                                  </div>
+                                                                                                                                                  `)
+
+
+                                                                                                                                                      
+                                                                                                                                                          +S('dk','Preocupações ambientais','Quatro processos em curso',`
+                                                                                                                                                          <div class="grid g1">
+                                                                                                                                                            ${cd('1','Degelo',`
+                                                                                                                                                              <div class="about-layout">
+                                                                                                                                                                <div class="about-text">
+                                                                                                                                                                  <p>Os últimos 18 anos registaram os níveis de gelo marinho do Ártico mais baixos da história, uma espiral descendente que continuará, dizem os cientistas. O Ártico estará livre de gelo no verão em algum momento até 2050, mesmo que os humanos parem de produzir poluição climática, de acordo com um relatório da Universidade de Hamburgo. Um exemplo é a passagem noroeste, até 1980 era fechada pelo gelo mesmo no verão, de lá prá cá começou a abrir no verão entre o Atlântico Norte e o Pacífico Norte devido ao aquecimento Global. A desestabilização dos sistemas de circulação oceânica, o derretimento do manto de gelo da Groenlândia, entre outros fatores, são interdependentes e atuariam como um efeito dominó no agravamento climático, levando ao colapso de ecossistemas, à perda de biodiversidade e de serviços ecossistêmicos. Uma vez desencadeado, esse processo levaria a uma temperatura média global muito mais alta do que a dos últimos 1,2 milhões de anos, gerando graves consequências para a humanidade (Steffen et al., 2018; Wunderling et al., 2024).</p>
+                                                                                                                                                                </div>
+                                                                                                                                                                <div class="about-photo">
+                                                                                                                                                                  <img src="assets/images/desgelo.jpg" alt="Degelo no Ártico">
+                                                                                                                                                                </div>
+                                                                                                                                                              </div>
+                                                                                                                                                            `)}
+                                                                                                                                                            
+                                                                                                                                                            ${cd('2','Permafrost',`
+                                                                                                                                                              <div class="about-layout">
+                                                                                                                                                                <div class="about-text">
+                                                                                                                                                                  <p>65% do Ártico é permafrost (solo congelado, assim encontramos muito carbono armazenado (dióxido de carbono e metano), com o descongelamento devido o aquecimento Global o carbono é liberado agravando ainda mais o aquecimento global. O Ártico está aquecendo de 3 à 4 vezes mais que a média do planeta. Além disso, durante milhares de anos, a paisagem arbustiva da tundra do Ártico armazenou carbono, mas os incêndios florestais e o degelo do permafrost significam que esta região está agora a libertar mais carbono do que armazena.</p>
+                                                                                                                                                                </div>
+                                                                                                                                                                <div class="about-photo">
+                                                                                                                                                                  <img src="assets/images/permafrost.jpg" alt="Permafrost no Ártico">
+                                                                                                                                                                </div>
+                                                                                                                                                              </div>
+                                                                                                                                                            `)}
+
+                                                                                                                                                            ${cd('3','Albedo',`
+                                                                                                                                                              <div class="about-layout">
+                                                                                                                                                                <div class="about-text">
+                                                                                                                                                                  <p>O albedo também está a cada dia menor. O gelo marinho atua como um espelho gigante, refletindo a luz solar para longe da Terra e de volta para o espaço. À medida que diminui, mais energia do Sol é absorvida pelo oceano escuro, o que acelera o aquecimento global.</p>
+                                                                                                                                                                </div>
+                                                                                                                                                                <div class="about-photo">
+                                                                                                                                                                  <img src="assets/images/albedo.jpg" alt="Gelo marinho e reflexão solar">
+                                                                                                                                                                </div>
+                                                                                                                                                              </div>
+                                                                                                                                                            `)}
+
+                                                                                                                                                            ${cd('4','Atlantificação',`
+                                                                                                                                                              <div class="about-layout">
+                                                                                                                                                                <div class="about-text">
+                                                                                                                                                                  <p>A “atlântificação” do Ártico também está sendo um problema evidente. No oceano Ártico, a haloclina fria atua como uma barreira física e térmica. Ela isola o gelo marinho da superfície, impedindo que o calor das águas atlânticas profundas (que são mais quentes) suba e derreta o gelo, mas infelizmente pesquisas recentes indicam o enfraquecimento dessa haloclina no Ártico, colaborando com o degelo.</p>
+                                                                                                                                                                </div>
+                                                                                                                                                                <div class="about-photo">
+                                                                                                                                                                  <img src="assets/images/atlantificação.jpg" alt="Águas do oceano Ártico">
+                                                                                                                                                                </div>
+                                                                                                                                                              </div>
+                                                                                                                                                            `)}
+                                                                                                                                                          </div>
+                                                                                                                                                          `)
+
+                                                                                                                                                          +S('','Educação climática','O Ártico como sala de aula viva',`
+                                                                                                                                                          <div class="about-layout">
+                                                                                                                                                            <div class="about-text">
+                                                                                                                                                              <p class="rv">
+                                                                                                                                                                Materiais didáticos, palestras gratuitas, exposições, experiências imersivas e conteúdos curriculares, baseados em Cultura Oceânica e distinguindo fatos observados, interpretações e questões ainda em estudo.
+                                                                                                                                                              </p>
+
+                                                                                                                                                              <p class="q rv">
+                                                                                                                                                                O oceano é o grande regulador climático do planeta.
+                                                                                                                                                              </p>
+                                                                                                                                                            </div>
+
+                                                                                                                                                            <div class="about-photo">
+                                                                                                                                                              <img src="assets/images/RCTIC AND ANTARCTIC POLAR EXPEDITION 2027 (27).jpg" alt="Educação climática no Ártico">
+                                                                                                                                                            </div>
+                                                                                                                                                          </div>
+                                                                                                                                                          `)
+                                                                                                                                                          );
+                                                                                                                                                    V.parceiros=P('Realização','Organizadores e chamada para projetos científicos.',
+                                                                                                                                                    
+                                                                                                                                                      S('','Quem realiza?','Organizadores',`
+                                                                                                                                                      <div class="grid g1">
+
+                                                                                                                                                        <div class="card rv organizer-layout">
+                                                                                                                                                          <div class="organizer-text">
+                                                                                                                                                            <h3>Fundação Aleixo Belov</h3>
+                                                                                                                                                            <p>A Fundação Aleixo Belov é uma instituição cultural, educativa e socioambiental criada em 2019, em Salvador, Bahia, pelo navegador e explorador Aleixo Belov. Seu propósito é aproximar a sociedade do mar por meio da educação, cultura oceânica, formação náutica e incentivo à pesquisa e às expedições.</p>
+                                                                                                                                                            <p>A Fundação apresenta possibilidades interessantes que podem dialogar com sua atuação em: mudanças climáticas e aquecimento dos oceanos, ecossistemas e biodiversidade marinha, regiões polares e mudanças no gelo marinho, conservação de cetáceos, ecotoxicologia marinha, algas marinhas e captura de carbono, expedições científicas e monitoramento ambiental.</p>
+                                                                                                                                                          </div>
+                                                                                                                                                          <div class="organizer-photo">
+                                                                                                                                                            <img src="assets/images/Captura de tela 2026-11-02 105350.png" alt="Fundação Aleixo Belov">
+                                                                                                                                                          </div>
+                                                                                                                                                        </div>
+
+                                                                                                                                                        <div class="card rv organizer-layout">
+                                                                                                                                                          <div class="organizer-text">
+                                                                                                                                                            <h3>Instituto Via Green</h3>
+                                                                                                                                                            <p>O Instituto Via Green é uma organização da sociedade civil, sediada em Santos - SP, com atuação voltada à promoção de boas práticas socioambientais por meio de tecnologia, voltadas à sustentabilidade, gestão ambiental, mudanças climáticas e descarbonização, inventários de gases de efeito estufa (GEE), gestão de carbono e compensação de emissões e desenvolvimento de soluções socioambientais para organizações públicas e privadas.</p>
+                                                                                                                                                            <p>Seu trabalho busca desenvolver projetos sustentáveis para mitigar e compensar impactos ambientais, com atenção a transporte e emissões climáticas. Destacada experiência em ESG, inovação e sustentabilidade corporativa. Tem mais de 15 anos de experiência acumulada no mercado de carbono e atuação junto a mais de 100 empresas. Na Expedição Polar, o Instituto Via Green soma conhecimentos de sustentabilidade, estratégias climáticas e impacto socioambiental.</p>
+                                                                                                                                                          </div>
+                                                                                                                                                          <div class="organizer-photo">
+                                                                                                                                                            <img src="assets/images/Captura de tela 2026-11-01 125026.png" alt="Instituto Via Green">
+                                                                                                                                                          </div>
+                                                                                                                                                        </div>
+
+                                                                                                                                                        <div class="card rv organizer-layout">
+                                                                                                                                                          <div class="organizer-text">
+                                                                                                                                                            <h3>Governança Expedição Polar Ártico e Antártica 2027</h3>
+                                                                                                                                                            <p>Laura Ippolito é indicada como Coordenadora Geral do Programa Expedição Polar; Larissa Nabuco Nogueira, como Coordenadora Executiva da Expedição Ártico 2027; e Conrado Bertoluzzi, como Coordenador Adjunto. O programa atribui à coordenação geral a articulação científica e educativa; à coordenação executiva, a logística e gestão da edição; e à coordenação adjunta o acompanhamento da execução financeira e da captação.</p>
+                                                                                                                                                          </div>
+                                                                                                                                                          <div class="organizer-photo">
+                                                                                                                                                            <img src="assets/images/Captura de tela 2026-11-01 125058.png" alt="Equipe de governança da Expedição Polar">
+                                                                                                                                                          </div>
+                                                                                                                                                        </div>
+
+                                                                                                                                                      </div>
+                                                                                                                                                      `)
+
+                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                          +S('dk','','Patrocínios',`
+                                                                                                                                                          <div class="grid">
+                                                                                                                                                            <div class="card rv sponsor-card">
+                                                                                                                                                              <img src="assets/images/patrocinio1.png" alt="Empresa 1">
+                                                                                                                                                              <h3>Empresa 1</h3>
+                                                                                                                                                              <p></p>
+                                                                                                                                                            </div>
+                                                                                                                                                            <div class="card rv sponsor-card">
+                                                                                                                                                              <img src="assets/images/patrocinio2.png" alt="Empresa 2">
+                                                                                                                                                              <h3>Empresa 2</h3>
+                                                                                                                                                              <p></p>
+                                                                                                                                                            </div>
+                                                                                                                                                            <div class="card rv sponsor-card">
+                                                                                                                                                              <img src="assets/images/patrocinio3.png" alt="Empresa 3">
+                                                                                                                                                              <h3>Empresa 3</h3>
+                                                                                                                                                              <p></p>
+                                                                                                                                                            </div>
+                                                                                                                                                          </div>
+                                                                                                                                                          <p style="margin-top:20px">
+                                                                                                                                                            <a class="btn bw" href="mailto:conservacao@expedicaopolar.org?subject=PROJETO%20CIENT%C3%8DFICO%20EXPEDI%C3%87%C3%83O%20POLAR%20%C3%81RTICO%202027">Enviar proposta</a>
+                                                                                                                                                          </p>`)
+
+                                                                                                                                                          +S('dk','','Parcerias',`
+                                                                                                                                                          <div class="grid">
+                                                                                                                                                            <div class="card rv sponsor-card">
+                                                                                                                                                              <img src="assets/images/parceria1.png" alt="Empresa 1">
+                                                                                                                                                              <h3>Empresa 1</h3>
+                                                                                                                                                              <p></p>
+                                                                                                                                                            </div>
+                                                                                                                                                            <div class="card rv sponsor-card">
+                                                                                                                                                              <img src="assets/images/parceria2.png" alt="Empresa 2">
+                                                                                                                                                              <h3>Empresa 2</h3>
+                                                                                                                                                              <p></p>
+                                                                                                                                                            </div>
+                                                                                                                                                            <div class="card rv sponsor-card">
+                                                                                                                                                              <img src="assets/images/parceria3.png" alt="Empresa 3">
+                                                                                                                                                              <h3>Empresa 3</h3>
+                                                                                                                                                              <p></p>
+                                                                                                                                                            </div>
+                                                                                                                                                          </div>
+                                                                                                                                                          <p style="margin-top:20px">
+                                                                                                                                                            <a class="btn bw" href="mailto:conservacao@expedicaopolar.org?subject=PROJETO%20CIENT%C3%8DFICO%20EXPEDI%C3%87%C3%83O%20POLAR%20%C3%81RTICO%202027">Enviar proposta</a>
+                                                                                                                                                          </p>`)
+
+                                                                                                                                                          +S('dk','','Apoio',`
+                                                                                                                                                            <div class="grid g5 apoio-grid">
+                                                                                                                                                                <img src="assets/images/Captura de tela 2026-11-02 110458.png" alt="Empresa 1">
+                                                                                                                                                                <img src="assets/images/0e702e2f-46a9-4e71-b399-6d736ec33dc5.jpeg" alt="Empresa 2">
+                                                                                                                                                                <img src="assets/images/51cdac23-3a5b-456e-aa82-e6ba172ae3b0.jpeg" alt="Empresa 3">
+                                                                                                                                                                <img src="assets/images/Captura de tela 2026-11-02 112342.png" alt="Empresa 4">
+                                                                                                                                                                <img src="assets/images/apoio5.png" alt="Empresa 5">
+                                                                                                                                                            </div>
+                                                                                                                                                          <p style="margin-top:20px">
+                                                                                                                                                            <a class="btn bw" href="mailto:conservacao@expedicaopolar.org?subject=PROJETO%20CIENT%C3%8DFICO%20EXPEDI%C3%87%C3%83O%20POLAR%20%C3%81RTICO%202027">Enviar proposta</a>
+                                                                                                                                                          </p>`)
+
+                                                                                                                                                                           
+                                                                                                                                                                        +S('','Parcerias','Apoie a expedição',`<p class="rv">Para patrocínio entre em contato com +55 (11) 96394-0934.</p><p> Logotipos de parceiros serão exibidos quando confirmados.</p>`));
+                                                                                                                                                                        const m=document.getElementById('menu'),a=document.getElementById('app'),b=document.getElementById('bg');
+                                                                                                                                                                        m.innerHTML=T.map(([i,t])=>`<a href="#${i}" data-r="${i}">${t}</a>`).join('');
+                                                                                                                                                                        document.getElementById('fl').innerHTML=T.map(([i,t])=>`<a href="#${i}">${t}</a>`).join('');
+                                                                                                                                                                        const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+                                                                                                                                                                        function go(){let r=location.hash.slice(1);if(!V[r])r='home';
+                                                                                                                                                                        a.innerHTML=V[r];
+                                                                                                                                                                        document.body.classList.toggle('home-page', r === 'home');
+                                                                                                                                                                        document.body.classList.toggle('expedicao-page', r === 'expedicao');
+                                                                                                                                                                        document.title=(r==='home'?'':T.find(t=>t[0]===r)[1]+' · ')+'Expedição Polar';
+                                                                                                                                                                        m.querySelectorAll('a').forEach(x=>x.classList.toggle('on',x.dataset.r===r));m.classList.remove('open');b.setAttribute('aria-expanded','false');
+                                                                                                                                                                        scrollTo(0,0);a.querySelectorAll('.rv').forEach(e=>io.observe(e))}
+                                                                                                                                                                        b.onclick=()=>b.setAttribute('aria-expanded',m.classList.toggle('open'));
+                                                                                                                                                                        addEventListener('hashchange',go);go();
+                                                                                                                                                                      </script>
+                                                                                                                                                                    </body>
+                                                                                                                                                                  </html>
