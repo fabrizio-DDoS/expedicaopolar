@@ -9,7 +9,7 @@ Site oficial do projeto **Expedição Polar 2027**, desenvolvido para apresentar
 
 ## 🌐 Acesse o projeto
 
-[Expedição Polar 2027](expedicaopolar.org.br)
+[Expedição Polar 2027](https://expedicaopolar.org.br)
 
 ## 👨‍💻 Desenvolvimento
 
