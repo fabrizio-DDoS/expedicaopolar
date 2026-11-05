@@ -71,7 +71,7 @@ header {
   z-index:30;
   padding:calc(env(safe-area-inset-top,0px) + 10px) 14px 0}
 .bar {
-  max-width:1180px;
+  max-width:1380px;
   margin:auto;
   display:flex;
   align-items:center;
@@ -90,6 +90,7 @@ header {
   display:flex;
   gap:8px;
   align-items:center;
+  margin-left: 45px;
   white-space:nowrap}
 .logo i {
   color:var(--sky);
@@ -1116,7 +1117,7 @@ body.expedicao-page #app .tl div:before {
                     </div>
                     <div>
                       <h3>Contato</h3>
-                        <a href="mailto:conservacao@expedicaopolar.org">conservacao@expedicaopolar.org</a>
+                        <a href="mailto:contato@expedicaopolar.org">contato@expedicaopolar.org</a>
                           <a href="https://expedicaopolar.org/" rel="noopener">expedicaopolar.org</a>
                             <span>Instagram: @expedicaopolar</span>
                             </div>
@@ -1142,7 +1143,7 @@ body.expedicao-page #app .tl div:before {
                         </svg>`;
                         const bird=`<img
                           class="hero-photo"
-                          src="assets/images/logoespedicao.jpeg"
+                          src="assets/images/duaslogos.jpg"
                           alt="Expedição Polar">`;
                           const cd=(ic,t,p,l)=>`<article class="card rv">
                           <div class="ic">${ic}</div>
@@ -1192,7 +1193,8 @@ body.expedicao-page #app .tl div:before {
                                       ['CB','Conrado Bertoluzzi','Coordenador Adjunto','Profissional com atuação destacada na área de sustentabilidade, sendo atualmente vinculado ao Instituto Via Green. Sua trajetória acadêmica e profissional é focada no desenvolvimento de soluções sustentáveis e gestão ambiental. Especialista em Sustentabilidade e ESG (Environmental, Social, and Governance), tem como foco a implementação de estratégias para mitigação de impactos ambientais e promoção da economia verde.','assets/images/conr.png'],
                                       ['AB','Aleixo Belov','Navegador e idealizador','Aleixo Belov é um dos maiores nomes da história da vela oceânica brasileira. Nascido na Ucrânia, em 1943, Belov construiu uma trajetória extraordinária como navegador, realizando grandes expedições marítimas e circunavegações pelo mundo. Sua conquista mais recente é impressionante: em 28 de fevereiro de 2026, aos 83 anos, Belov retornou a Salvador depois de completar sua sexta volta ao mundo, a bordo do Veleiro Escola Fraternidade. Também realizou três voltas ao mundo sozinho, no veleiro Três Marias, coordenou as expedições com jovens brasileiros no veleiro Fraternidade, além disso também realizou navegações: pela Antártica, fez a Passagem Noroeste (Ártico canadense) a Passagem Nordeste, e foi o capitão da primeira embarcação das Américas a completar a Passagem Nordeste (Ártico russo), segundo a Marinha do Brasil','assets/images/aleixo.jpg'],
                                       ['LN','Larissa Nabuco Nogueira','Coordenadora Executiva','Oceanógrafa, pesquisadora e diretora executiva da Fundação Aleixo Belov e do Museu do Mar Aleixo Belov, em Salvador (BA). Tem doutorado em Oceanografia Física na UFBA, participou da expedição de Aleixo Belov a bordo do veleiro Fraternidade, realizando a Passagem Noroeste, pelo Alasca e norte do Canadá, permaneceu aproximadamente dez meses no mar, percorrendo mais de 20 mil milhas náuticas, recebeu a medalha e o diploma Amigo da Marinha em novembro de 2024 e assumiu a diretoria cultural da SOAMAR Bahia no biênio 2025–2027.','assets/images/larissa.png'],
-                                      ['FE','Francyne Elias-Piera','Bióloga marinha e comunicadora científica','é uma bióloga marinha, pesquisadora e comunicadora científica brasileira, amplamente reconhecida por seu trabalho de conscientização sobre a Antártica e as mudanças climáticas. É Doutora em Ciência Ambiental e Oceanografia Biológica. É especialista em ecologia antártica e biologia marinha. Já esteve no continente antártico em cinco ocasiões para realizar pesquisas científicas.','assets/images/francine.png'],
+                                      ['RM','Rodrigo Minghelli','Desenvolvimento Institucional','Atua na estruturação de organizações da sociedade civil, desenvolvimento institucional, compliance contábil e governança estratégica, promovendo integração entre setor privado, sociedade civil e políticas públicas com foco em impacto mensurável e sustentabilidade de longo prazo. Atua em Governança, Sustentabilidade, Balanço Socioambiental (NBC T15), Responsabilidade Socioambiental, ESG, ODS e Modelos Híbridos de Impacto aplicados ao Terceiro e Quarto Setor. Com mais de 35 anos de experiência transversal nos setores empresarial, industrial, comercial e institucional.','assets/images/min.png'],
+                                      ['FE','Francyne Elias-Piera','Bióloga marinha e comunicadora científica','É bióloga marinha, pesquisadora e comunicadora científica brasileira, amplamente reconhecida por seu trabalho de conscientização sobre a Antártica e as mudanças climáticas. É Doutora em Ciência Ambiental e Oceanografia Biológica. É especialista em ecologia antártica e biologia marinha. Já esteve no continente antártico em cinco ocasiões para realizar pesquisas científicas.','assets/images/francine.png'],
                                       ['MT','Marcelo Telles','Velejador e oceanógrafo','Velejador especialista em palestras motivacionais com foco na preservação da natureza. Oceanógrafo (FURG) e com uma paixão inabalável pelos oceanos e ecossistemas marinhos, sua trajetória como velejador e defensor do meio ambiente o levou a uma jornada de conscientização ecológica e cultural ao redor do mundo. Telles desenvolveu sua tese de mestrado com recifes em Abrolhos-BA .Sempre comprometido em contribuir com a ciência e a preservação ambiental, ele é o fundador e presidente do Instituto Gaia Soul, uma organização que tem a missão de informar, sensibilizar e engajar as pessoas na conservação da natureza','assets/images/marcelo.png']];
                                       const V={};
                                       V.home=`<section class="hero"><video
@@ -1207,8 +1209,12 @@ body.expedicao-page #app .tl div:before {
                                           Seu navegador não suporta vídeos.
                                         </video>
                                         <div class="w">
-                                          <h1>EXPEDIÇÃO<br>POLAR</h1>
-                                            <h2>Ciência além dos limites.</h2>
+                                          <img
+                                              src="assets/images/ÁRTICO E ANTÁRTICA 2027 (1)-Photoroom.png"
+                                              alt="Expedição Polar"
+                                              style="width:clamp(300px, 50vw, 810px); max-width:100%; height:auto; display:block; margin-bottom:10px;"
+                                            >
+                                            <h2><b>Ciência além dos limites.</b></h2>
                                               <p>“Uma jornada de exploração, descoberta científica e conservação dos ecossistemas polares.”</p>
                                                 <p style="margin-top:26px">
                                                   <a class="btn bw" href="#expedicao">Conheça a Expedição</a>
@@ -1452,7 +1458,7 @@ body.expedicao-page #app .tl div:before {
                                                                                                                       S('','','Edital de Projetos Científicos',`
                                                                                                                       <div class="about-layout">
                                                                                                                         <div class="about-text">
-                                                                                                                          <p class="rv">O edital fornecido pelos realizadores abre oportunidade para projetos científicos a bordo do Veleiro Escola Fraternidade. As inscrições estão previstas de 20 de novembro a 24 de dezembro de 2026, até 20h (horário de Brasília), pelo e-mail conservacao@expedicaopolar.org, com o assunto “PROJETO CIENTÍFICO EXPEDIÇÃO POLAR ÁRTICO 2027”. A confirmação de recebimento deve ocorrer por e-mail. Verificar nos canais oficiais se o edital e o calendário permanecem vigentes antes de publicar esta chamada.</p>
+                                                                                                                          <p class="rv">O edital fornecido pelos realizadores abre oportunidade para projetos científicos a bordo do Veleiro Escola Fraternidade. As inscrições estão previstas de 20 de novembro a 24 de dezembro de 2026, até 20h (horário de Brasília), pelo e-mail contato@expedicaopolar.org, com o assunto “PROJETO CIENTÍFICO EXPEDIÇÃO POLAR ÁRTICO 2027”. A confirmação de recebimento deve ocorrer por e-mail. Verificar nos canais oficiais se o edital e o calendário permanecem vigentes antes de publicar esta chamada.</p>
 
                                                                                                                           <p class="rv">O edital prevê até quatro pesquisadores embarcados simultaneamente, em períodos de 7, 14, 21, 30, 45, 60 ou 90 dias, ou por toda a expedição, sujeito à seleção e à viabilidade. Também admite modalidade embarcada, coleta delegada à tripulação treinada, instrumentos autônomos e projetos de educação/comunicação. Entre as áreas previstas estão mudanças climáticas, oceanografia, regiões polares, algas, ecotoxicologia, cetáceos, microrganismos, aves marinhas e projetos interdisciplinares.</p>
 
@@ -1466,7 +1472,7 @@ body.expedicao-page #app .tl div:before {
 
                                                                                                                       +S('','submissão de projetos','Arquivos para submissão de projetos científicos',`<div class="grid g3">
                                                                             
-                                                                                                                     <a href="https://docs.google.com/document/d/180PHn7XOtg9hFi7N24qQzrFhAXOWmrXf/edit#heading=h.1ajqe7h84rwg" class="cell-link" target="_blank">${cd('A','Edital de Seleção de Projetos Científicos','')}</a> 
+                                                                                                                     <a href="https://docs.google.com/document/d/1emhb50_s0c1yIhegsqyeQ9mg8H6X3nvF/edit?usp=sharing&ouid=112537575796411080980&rtpof=true&sd=true" class="cell-link" target="_blank">${cd('A','Edital de Seleção de Projetos Científicos','')}</a> 
                                                                                                                     <a href="https://docs.google.com/document/d/1sWMtainbo6pQoMwXayzaV7wuRp_xH0Qj/edit?usp=drivesdk&ouid=101648171364574256344&rtpof=true&sd=true" class="cell-link" target="_blank">${cd('B','Anexo I: Formulário de Inscrição','')}</a>
                                                                                                                       <a href="https://docs.google.com/document/d/1wnamtwGdNCz2dPsbnOTBdX1haKWzEUl9/edit?usp=drivesdk&ouid=101648171364574256344&rtpof=true&sd=true" class="cell-link" target="_blank">${cd('C','Anexo II: Declarações do Proponente','')}</a>
                                                                                                                       <a href="https://docs.google.com/document/d/1CtYOy3ci2R_YWr26J69mMB1ZGE_IVS3M/edit?usp=drivesdk&ouid=101648171364574256344&rtpof=true&sd=true" class="cell-link" target="_blank">${cd('D','Anexo III: Modelo de Carta de Anuência Institucional','')}</a>
@@ -1498,6 +1504,7 @@ body.expedicao-page #app .tl div:before {
                                                                                                                                     Mais de 80 mil km anuais em indivíduos rastreados por geolocalizadores.
                                                                                                                                     Registros de até aproximadamente 30 anos de vida
                                                                                                                                     </p>
+                                                                                                                                    
                                                                                                                           </div>
                                                                                                                           <div class="vis rv">
                                                                                                                             <img\n class=\"hero-photo\"\n src=\"assets/images/andorinha.jpg\"\n alt=\"Expedição Polar\">
@@ -1526,7 +1533,7 @@ body.expedicao-page #app .tl div:before {
                                                                                                                                         <p class="src" style="margin-top:20px">Referências: <a href="https://www.pnas.org/doi/10.1073/pnas.0909493107" rel="noopener">PNAS</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2836663/" rel="noopener">PMC2836663</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6745660/" rel="noopener">PMC6745660</a>
                                                                                                                                         </p>`)+
                                                                                                                                         S('','','Urso Polar (<i>Ursus maritimus</i>)',`<div class="split">
-                                                                                                                                            <div class="rv">
+                                                                                                                                            <div class="rv"><!--
                                                                                                                                               <p>O trinta-réis-ártico ou andorinha-do-Ártico (Sterna paradisaea) é conhecida por realizar uma das maiores migrações do reino animal: viaja anualmente do Ártico à Antártica e retorna, acompanhando o verão em ambos os hemisférios.</p>
                                                                                                                                                 <p>Apesar de seu pequeno porte, por volta de 125 g, dados provenientes de anilhamento e levantamentos realizados em alto-mar sugerem que sua migração anual partindo de áreas de reprodução nas regiões boreais e no alto Ártico em direção ao Oceano Antártico pode ser o deslocamento sazonal mais longo realizado por qualquer animal.</p>
                                                                                                                                                 <p>A andorinha-do-Ártico percorre aproximadamente:
@@ -1534,13 +1541,14 @@ body.expedicao-page #app .tl div:before {
                                                                                                                                                           Mais de 80 mil km anuais em indivíduos rastreados por geolocalizadores.
                                                                                                                                                           Registros de até aproximadamente 30 anos de vida
                                                                                                                                                           </p>
+                                                                                                                                                          -->
                                                                                                                                                 </div>
                                                                                                                                                 <div class="vis rv">
                                                                                                                                                   <img\n class=\"hero-photo\"\n src=\"assets/images/ursopolar.jpg\"\n alt=\"Expedição Polar\">
                                                                                                                                                   </div>
                                                                                                                                                 </div>`)+
                                                                                                                                                 S('','','Narval (<i>Monodon monoceros</i>)',`<div class="split">
-                                                                                                                                            <div class="rv">
+                                                                                                                                            <div class="rv"><!--
                                                                                                                                               <p>O trinta-réis-ártico ou andorinha-do-Ártico (Sterna paradisaea) é conhecida por realizar uma das maiores migrações do reino animal: viaja anualmente do Ártico à Antártica e retorna, acompanhando o verão em ambos os hemisférios.</p>
                                                                                                                                                 <p>Apesar de seu pequeno porte, por volta de 125 g, dados provenientes de anilhamento e levantamentos realizados em alto-mar sugerem que sua migração anual partindo de áreas de reprodução nas regiões boreais e no alto Ártico em direção ao Oceano Antártico pode ser o deslocamento sazonal mais longo realizado por qualquer animal.</p>
                                                                                                                                                 <p>A andorinha-do-Ártico percorre aproximadamente:
@@ -1548,13 +1556,14 @@ body.expedicao-page #app .tl div:before {
                                                                                                                                                           Mais de 80 mil km anuais em indivíduos rastreados por geolocalizadores.
                                                                                                                                                           Registros de até aproximadamente 30 anos de vida
                                                                                                                                                           </p>
+                                                                                                                                                          -->
                                                                                                                                                 </div>
                                                                                                                                                 <div class="vis rv">
                                                                                                                                                   <img\n class=\"hero-photo\"\n src=\"assets/images/narval.png\"\n alt=\"Expedição Polar\">
                                                                                                                                                   </div>
                                                                                                                                                 </div>`)+
                                                                                                                                                 S('','','Baleia da Groelândia (<i>Balaena mysticetus</i>)',`<div class="split">
-                                                                                                                                            <div class="rv">
+                                                                                                                                            <div class="rv"><!-- 
                                                                                                                                               <p>O trinta-réis-ártico ou andorinha-do-Ártico (Sterna paradisaea) é conhecida por realizar uma das maiores migrações do reino animal: viaja anualmente do Ártico à Antártica e retorna, acompanhando o verão em ambos os hemisférios.</p>
                                                                                                                                                 <p>Apesar de seu pequeno porte, por volta de 125 g, dados provenientes de anilhamento e levantamentos realizados em alto-mar sugerem que sua migração anual partindo de áreas de reprodução nas regiões boreais e no alto Ártico em direção ao Oceano Antártico pode ser o deslocamento sazonal mais longo realizado por qualquer animal.</p>
                                                                                                                                                 <p>A andorinha-do-Ártico percorre aproximadamente:
@@ -1562,13 +1571,14 @@ body.expedicao-page #app .tl div:before {
                                                                                                                                                           Mais de 80 mil km anuais em indivíduos rastreados por geolocalizadores.
                                                                                                                                                           Registros de até aproximadamente 30 anos de vida
                                                                                                                                                           </p>
+                                                                                                                                                          -->
                                                                                                                                                 </div>
                                                                                                                                                 <div class="vis rv">
                                                                                                                                                   <img\n class=\"hero-photo\"\n src=\"assets/images/baleiagro.jpeg\"\n alt=\"Expedição Polar\">
                                                                                                                                                   </div>
                                                                                                                                                 </div>`)+
                                                                                                                                                 S('','','Beluga (<i>Delphinapterus leucas</i>)',`<div class="split">
-                                                                                                                                            <div class="rv">
+                                                                                                                                            <div class="rv"><!--
                                                                                                                                               <p>O trinta-réis-ártico ou andorinha-do-Ártico (Sterna paradisaea) é conhecida por realizar uma das maiores migrações do reino animal: viaja anualmente do Ártico à Antártica e retorna, acompanhando o verão em ambos os hemisférios.</p>
                                                                                                                                                 <p>Apesar de seu pequeno porte, por volta de 125 g, dados provenientes de anilhamento e levantamentos realizados em alto-mar sugerem que sua migração anual partindo de áreas de reprodução nas regiões boreais e no alto Ártico em direção ao Oceano Antártico pode ser o deslocamento sazonal mais longo realizado por qualquer animal.</p>
                                                                                                                                                 <p>A andorinha-do-Ártico percorre aproximadamente:
@@ -1576,6 +1586,7 @@ body.expedicao-page #app .tl div:before {
                                                                                                                                                           Mais de 80 mil km anuais em indivíduos rastreados por geolocalizadores.
                                                                                                                                                           Registros de até aproximadamente 30 anos de vida
                                                                                                                                                           </p>
+                                                                                                                                                          -->
                                                                                                                                                 </div>
                                                                                                                                                 <div class="vis rv">
                                                                                                                                                   <img\n class=\"hero-photo\"\n src=\"assets/images/beluga.jpg\"\n alt=\"Expedição Polar\">
@@ -1749,7 +1760,7 @@ body.expedicao-page #app .tl div:before {
                                                                                                                                                             </div>
                                                                                                                                                           </div>
                                                                                                                                                           <p style="margin-top:20px">
-                                                                                                                                                            <a class="btn bw" href="mailto:conservacao@expedicaopolar.org?subject=PROJETO%20CIENT%C3%8DFICO%20EXPEDI%C3%87%C3%83O%20POLAR%20%C3%81RTICO%202027">Enviar proposta</a>
+                                                                                                                                                            <a class="btn bw" href="mailto:contato@expedicaopolar.org?subject=PROJETO%20CIENT%C3%8DFICO%20EXPEDI%C3%87%C3%83O%20POLAR%20%C3%81RTICO%202027">Enviar proposta</a>
                                                                                                                                                           </p>`)
 
                                                                                                                                                           +S('dk','','Parcerias',`
@@ -1771,7 +1782,7 @@ body.expedicao-page #app .tl div:before {
                                                                                                                                                             </div>
                                                                                                                                                           </div>
                                                                                                                                                           <p style="margin-top:20px">
-                                                                                                                                                            <a class="btn bw" href="mailto:conservacao@expedicaopolar.org?subject=PROJETO%20CIENT%C3%8DFICO%20EXPEDI%C3%87%C3%83O%20POLAR%20%C3%81RTICO%202027">Enviar proposta</a>
+                                                                                                                                                            <a class="btn bw" href="mailto:contato@expedicaopolar.org?subject=PROJETO%20CIENT%C3%8DFICO%20EXPEDI%C3%87%C3%83O%20POLAR%20%C3%81RTICO%202027">Enviar proposta</a>
                                                                                                                                                           </p>`)
 
                                                                                                                                                           +S('dk','','Apoio',`
@@ -1780,10 +1791,14 @@ body.expedicao-page #app .tl div:before {
                                                                                                                                                                 <img src="assets/images/0e702e2f-46a9-4e71-b399-6d736ec33dc5.jpeg" alt="Empresa 2">
                                                                                                                                                                 <img src="assets/images/51cdac23-3a5b-456e-aa82-e6ba172ae3b0.jpeg" alt="Empresa 3">
                                                                                                                                                                 <img src="assets/images/Captura de tela 2026-11-02 112342.png" alt="Empresa 4">
-                                                                                                                                                                <img src="assets/images/apoio5.png" alt="Empresa 5">
+                                                                                                                                                                <img src="assets/images/WhatsApp Image 2026-11-05 at 15.19.52.jpeg" alt="Empresa 5">
+                                                                                                                                                                <img src="assets/images/Logo Inst Gaia_JPEG.jpg" alt="Empresa 6">
+                                                                                                                                                                <img src="assets/images/Foto de Laura Ippolito.jpg" alt="Empresa 7">
+                                                                                                                                                                <img src="assets/images/WhatsApp Image 2026-11-05 at 15.25.43.jpeg" alt="Empresa 8">
+
                                                                                                                                                             </div>
                                                                                                                                                           <p style="margin-top:20px">
-                                                                                                                                                            <a class="btn bw" href="mailto:conservacao@expedicaopolar.org?subject=PROJETO%20CIENT%C3%8DFICO%20EXPEDI%C3%87%C3%83O%20POLAR%20%C3%81RTICO%202027">Enviar proposta</a>
+                                                                                                                                                            <a class="btn bw" href="mailto:contato@expedicaopolar.org?subject=PROJETO%20CIENT%C3%8DFICO%20EXPEDI%C3%87%C3%83O%20POLAR%20%C3%81RTICO%202027">Enviar proposta</a>
                                                                                                                                                           </p>`)
 
                                                                                                                                                                            
