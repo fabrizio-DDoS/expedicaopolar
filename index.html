@@ -932,11 +932,10 @@ body.expedicao-page #app .tl div:before {
 
 .context-photo img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 14px;
+  height: auto;
+  object-fit: contain;
   display: block;
+  border-radius: 12px;
 }
 
 @media (max-width: 700px) {
@@ -1067,6 +1066,56 @@ body.expedicao-page #app .tl div:before {
     }
 }
 
+/* Destaque Aleixo Belov */
+.crew-featured {
+  padding: 35px;
+  gap: 35px;
+  border: 1px solid rgba(142, 197, 255, 0.4);
+  background: linear-gradient(
+    135deg,
+    rgba(30, 65, 100, 0.35),
+    rgba(10, 25, 45, 0.8)
+  );
+}
+
+.crew-featured .crew-info h3 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.crew-featured .crew-info p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.crew-featured .crew-photo {
+  width: 240px;
+  height: 280px;
+  border-radius: 16px;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 480px) {
+  .crew-featured {
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .crew-featured .crew-info h3 {
+    font-size: 23px;
+  }
+
+  .crew-featured .crew-info p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .crew-featured .crew-photo {
+    width: 110px;
+    height: 145px;
+  }
+}
+
 </style>
     </head>
     <body>
@@ -1188,14 +1237,14 @@ body.expedicao-page #app .tl div:before {
                                         </div>
                                       </div>
                                     </div>${b}`;
-                                      const crew=[['LI','Laura Ippolito','Coordenadora Geral','Bióloga especialista em conservação e manejo de vertebrados marinhos, com mais de 25 anos de experiência na atuação com fauna de todos os continentes do Planeta, incluindo regiões polares. Possui ampla experiência em manejo, reabilitação, conservação e pesquisa da fauna marinha, com destaque para mamíferos aquáticos. Foi bióloga responsável pelo Aquário de São Paulo durante dez anos, criou o Instituto Aquário de São Paulo, voltado à educação e conscientização ambiental, também atuou como coordenadora-geral do Projeto de Monitoramento de Praias da Bacia de Santos (PMP-BS). Foi gerente de Operações do Instituto Mar, desenvolvendo atividades de conservação da biodiversidade marinha, pesquisa e reabilitação de fauna. Leciona em cursos de pós-graduação, é velejadora e coordenadora geral da Expedição Polar Ártico e Antártica 2027.','assets/images/lauramain.png'],
-                                      ['MH','Marcos Hurodovich','Navegador e idealizador','Capitão com experiência comprovada em expedições polares. Navegou o equivalente a três voltas ao mundo, com foco em rotas extremas como a Passagem de Drake, projetista especialista em sistemas elétricos navais, construtor naval atuando na concepção e operação de projetos de pesquisa ecológica sempre alinhando performance, segurança e sustentabilidade. Marcos reúne experiência prática em navegação, construção e preparação de veleiros para expedições extremas. São conhecimentos especialmente relevantes para quem pretende navegar em águas polares. Como parceiro de Amyr Klink participou da construção do veleiro Paratii e integrou expedições comandadas por Amyr. Publicou em 2025 seu livro "Expedição Kotik" onde destaca suas três últimas viagens ao Polo Sul. Expedições anteriores lideradas por Hurodovich resultaram também na criação de documentários para o YouTube.','assets/images/hudo.png'],
+                                      const crew=[['MH','Marcos Hurodovich','Navegador e idealizador','Capitão com experiência comprovada em expedições polares. Navegou o equivalente a três voltas ao mundo, com foco em rotas extremas como a Passagem de Drake, projetista especialista em sistemas elétricos navais, construtor naval atuando na concepção e operação de projetos de pesquisa ecológica sempre alinhando performance, segurança e sustentabilidade. Marcos reúne experiência prática em navegação, construção e preparação de veleiros para expedições extremas. São conhecimentos especialmente relevantes para quem pretende navegar em águas polares. Como parceiro de Amyr Klink participou da construção do veleiro Paratii e integrou expedições comandadas por Amyr. Publicou em 2025 seu livro "Expedição Kotik" onde destaca suas três últimas viagens ao Polo Sul. Expedições anteriores lideradas por Hurodovich resultaram também na criação de documentários para o YouTube.','assets/images/hudo.png'],
+                                      ['LI','Laura Ippolito','Coordenadora Geral','Bióloga especialista em conservação e manejo de vertebrados marinhos, com mais de 25 anos de experiência na atuação com fauna de todos os continentes do Planeta, incluindo regiões polares. Possui ampla experiência em manejo, reabilitação, conservação e pesquisa da fauna marinha, com destaque para mamíferos aquáticos. Foi bióloga responsável pelo Aquário de São Paulo durante dez anos, criou o Instituto Aquário de São Paulo, voltado à educação e conscientização ambiental, também atuou como coordenadora-geral do Projeto de Monitoramento de Praias da Bacia de Santos (PMP-BS). Foi gerente de Operações do Instituto Mar, desenvolvendo atividades de conservação da biodiversidade marinha, pesquisa e reabilitação de fauna. Leciona em cursos de pós-graduação, é velejadora e coordenadora geral da Expedição Polar Ártico e Antártica 2027.','assets/images/lauramain.png'],
                                       ['CB','Conrado Bertoluzzi','Coordenador Adjunto','Profissional com atuação destacada na área de sustentabilidade, sendo atualmente vinculado ao Instituto Via Green. Sua trajetória acadêmica e profissional é focada no desenvolvimento de soluções sustentáveis e gestão ambiental. Especialista em Sustentabilidade e ESG (Environmental, Social, and Governance), tem como foco a implementação de estratégias para mitigação de impactos ambientais e promoção da economia verde.','assets/images/conr.png'],
-                                      ['AB','Aleixo Belov','Navegador e idealizador','Aleixo Belov é um dos maiores nomes da história da vela oceânica brasileira. Nascido na Ucrânia, em 1943, Belov construiu uma trajetória extraordinária como navegador, realizando grandes expedições marítimas e circunavegações pelo mundo. Sua conquista mais recente é impressionante: em 28 de fevereiro de 2026, aos 83 anos, Belov retornou a Salvador depois de completar sua sexta volta ao mundo, a bordo do Veleiro Escola Fraternidade. Também realizou três voltas ao mundo sozinho, no veleiro Três Marias, coordenou as expedições com jovens brasileiros no veleiro Fraternidade, além disso também realizou navegações: pela Antártica, fez a Passagem Noroeste (Ártico canadense) a Passagem Nordeste, e foi o capitão da primeira embarcação das Américas a completar a Passagem Nordeste (Ártico russo), segundo a Marinha do Brasil','assets/images/aleixo.jpg'],
+                                      ['AB','Aleixo Belov','Navegador e idealizador','Aleixo Belov é um dos maiores nomes da história da vela oceânica brasileira. Nascido na Ucrânia, em 1943, Belov construiu uma trajetória extraordinária como navegador, realizando grandes expedições marítimas e circunavegações pelo mundo. Sua conquista mais recente é impressionante: em 28 de fevereiro de 2026, aos 83 anos, Belov retornou a Salvador depois de completar sua sexta volta ao mundo, a bordo do Veleiro Escola Fraternidade. Também realizou três voltas ao mundo sozinho, no veleiro Três Marias, coordenou as expedições com jovens brasileiros no veleiro Fraternidade, além disso também realizou navegações: pela Antártica, fez a Passagem Noroeste (Ártico canadense) a Passagem Nordeste, e foi o capitão da primeira embarcação das Américas a completar a Passagem Nordeste (Ártico russo), segundo a Marinha do Brasil.','assets/images/aleixo.jpg'],
                                       ['LN','Larissa Nabuco Nogueira','Coordenadora Executiva','Oceanógrafa, pesquisadora e diretora executiva da Fundação Aleixo Belov e do Museu do Mar Aleixo Belov, em Salvador (BA). Tem doutorado em Oceanografia Física na UFBA, participou da expedição de Aleixo Belov a bordo do veleiro Fraternidade, realizando a Passagem Noroeste, pelo Alasca e norte do Canadá, permaneceu aproximadamente dez meses no mar, percorrendo mais de 20 mil milhas náuticas, recebeu a medalha e o diploma Amigo da Marinha em novembro de 2024 e assumiu a diretoria cultural da SOAMAR Bahia no biênio 2025–2027.','assets/images/larissa.png'],
                                       ['RM','Rodrigo Minghelli','Desenvolvimento Institucional','Atua na estruturação de organizações da sociedade civil, desenvolvimento institucional, compliance contábil e governança estratégica, promovendo integração entre setor privado, sociedade civil e políticas públicas com foco em impacto mensurável e sustentabilidade de longo prazo. Atua em Governança, Sustentabilidade, Balanço Socioambiental (NBC T15), Responsabilidade Socioambiental, ESG, ODS e Modelos Híbridos de Impacto aplicados ao Terceiro e Quarto Setor. Com mais de 35 anos de experiência transversal nos setores empresarial, industrial, comercial e institucional.','assets/images/min.png'],
                                       ['FE','Francyne Elias-Piera','Bióloga marinha e comunicadora científica','É bióloga marinha, pesquisadora e comunicadora científica brasileira, amplamente reconhecida por seu trabalho de conscientização sobre a Antártica e as mudanças climáticas. É Doutora em Ciência Ambiental e Oceanografia Biológica. É especialista em ecologia antártica e biologia marinha. Já esteve no continente antártico em cinco ocasiões para realizar pesquisas científicas.','assets/images/francine.png'],
-                                      ['MT','Marcelo Telles','Velejador e oceanógrafo','Velejador especialista em palestras motivacionais com foco na preservação da natureza. Oceanógrafo (FURG) e com uma paixão inabalável pelos oceanos e ecossistemas marinhos, sua trajetória como velejador e defensor do meio ambiente o levou a uma jornada de conscientização ecológica e cultural ao redor do mundo. Telles desenvolveu sua tese de mestrado com recifes em Abrolhos-BA .Sempre comprometido em contribuir com a ciência e a preservação ambiental, ele é o fundador e presidente do Instituto Gaia Soul, uma organização que tem a missão de informar, sensibilizar e engajar as pessoas na conservação da natureza','assets/images/marcelo.png']];
+                                      ['MT','Marcelo Telles','Velejador e oceanógrafo','Velejador especialista em palestras motivacionais com foco na preservação da natureza. Oceanógrafo (FURG) e com uma paixão inabalável pelos oceanos e ecossistemas marinhos, sua trajetória como velejador e defensor do meio ambiente o levou a uma jornada de conscientização ecológica e cultural ao redor do mundo. Telles desenvolveu sua tese de mestrado com recifes em Abrolhos-BA .Sempre comprometido em contribuir com a ciência e a preservação ambiental, ele é o fundador e presidente do Instituto Gaia Soul, uma organização que tem a missão de informar, sensibilizar e engajar as pessoas na conservação da natureza.','assets/images/marcelo.png']];
                                       const V={};
                                       V.home=`<section class="hero"><video
                                           class="hero-photo"
@@ -1292,7 +1341,20 @@ body.expedicao-page #app .tl div:before {
                                                                                     
                                                                                           ${S('','Equipe e instituições','Quem está à frente',`
                                                                                             <div class="grid equipe-grid">
-                                                                                              ${crew.slice(0,5).map(c=>`
+                                                                                              ${[...crew].sort((a,b) => {
+                                                                                                  const ordem = [
+                                                                                                    'Aleixo Belov',
+                                                                                                    'Laura Ippolito',
+                                                                                                    'Marcos Hurodovich',
+                                                                                                    'Conrado Bertoluzzi',
+                                                                                                    'Larissa Nabuco Nogueira',
+                                                                                                    'Rodrigo Minghelli',
+                                                                                                    'Francyne Elias-Piera',
+                                                                                                    'Marcelo Telles'
+                                                                                                  ];
+
+                                                                                                  return ordem.indexOf(a[1]) - ordem.indexOf(b[1]);
+                                                                                                }).slice(0,5).map(c=>`
                                                                                                 <div class="card rv">
                                                                                                   <img class="equipe-foto" src="${c[4]}" alt="${c[1]}">
                                                                                                   <h3>${c[1]}</h3>
@@ -1455,7 +1517,7 @@ body.expedicao-page #app .tl div:before {
                                                                                                                       S('','','Edital de Projetos Científicos',`
                                                                                                                       <div class="about-layout">
                                                                                                                         <div class="about-text">
-                                                                                                                          <p class="rv">O edital fornecido pelos realizadores abre oportunidade para projetos científicos a bordo do Veleiro Escola Fraternidade. As inscrições estão previstas de 20 de novembro a 24 de dezembro de 2026, até 20h (horário de Brasília), pelo e-mail contato@expedicaopolar.org, com o assunto “PROJETO CIENTÍFICO EXPEDIÇÃO POLAR ÁRTICO 2027”. A confirmação de recebimento deve ocorrer por e-mail. Verificar nos canais oficiais se o edital e o calendário permanecem vigentes antes de publicar esta chamada.</p>
+                                                                                                                          <p class="rv">O edital fornecido pelos realizadores abre oportunidade para projetos científicos a bordo do Veleiro Escola Fraternidade. As inscrições estão previstas de 20 de novembro a 24 de dezembro de 2026, até 20h (horário de Brasília), pelo e-mail conservacao@expedicaopolar.org, com o assunto “PROJETO CIENTÍFICO EXPEDIÇÃO POLAR ÁRTICO 2027”. A confirmação de recebimento deve ocorrer por e-mail. Verificar nos canais oficiais se o edital e o calendário permanecem vigentes antes de publicar esta chamada.</p>
 
                                                                                                                           <p class="rv">O edital prevê até quatro pesquisadores embarcados simultaneamente, em períodos de 7, 14, 21, 30, 45, 60 ou 90 dias, ou por toda a expedição, sujeito à seleção e à viabilidade. Também admite modalidade embarcada, coleta delegada à tripulação treinada, instrumentos autônomos e projetos de educação/comunicação. Entre as áreas previstas estão mudanças climáticas, oceanografia, regiões polares, algas, ecotoxicologia, cetáceos, microrganismos, aves marinhas e projetos interdisciplinares.</p>
 
@@ -1597,16 +1659,19 @@ body.expedicao-page #app .tl div:before {
                                                                                                                                             <p>Registro a ser publicado pela equipe.</p>
                                                                                                                                             </div>`).join('')}</div>`));
                                                                                                                                             
-                                                                                                                                                V.equipe=P('Nossa Equipe','Coordenação, capitães e pesquisadores.',S('','Governança','Equipe técnica',`
+                                                                                                                                                V.equipe=P('Nossa Equipe','Capitães, coordenação e pesquisadores.',S('','Governança','Equipe técnica',`
                                                                                                                                                 <div class="grid g1">
-                                                                                                                                                  ${crew.map(c=>`
-                                                                                                                                                    <div class="card rv crew-card">
+                                                                                                                                                  ${[...crew].sort((a,b) =>
+                                                                                                                                                      (a[1] === 'Aleixo Belov' ? -1 : 0) -
+                                                                                                                                                      (b[1] === 'Aleixo Belov' ? -1 : 0)
+                                                                                                                                                    ).map(c=>`
+                                                                                                                                                    <div class="card rv crew-card ${c[1] === 'Aleixo Belov' ? 'crew-featured' : ''}">
                                                                                                                                                       <div class="crew-info">
                                                                                                                                                         <h3>${c[1]}</h3>
                                                                                                                                                         <span class="tag">${c[2]}</span>
                                                                                                                                                         <p>${c[3]||''}</p>
                                                                                                                                                       </div>
-                                                                                                                                                      <img class="crew-photo" src="${c[4]||'images/placeholder.jpg'}" alt="${c[1]}">
+                                                                                                                                                      <img class="crew-photo" src="${c[1] === 'Aleixo Belov' ? 'assets/images/belovepensando.png' : (c[4]||'images/placeholder.jpg')}" alt="${c[1]}">
                                                                                                                                                     </div>
                                                                                                                                                   `).join('')}
                                                                                                                                                 </div>`));
@@ -1616,7 +1681,7 @@ body.expedicao-page #app .tl div:before {
                                                                                                                                                   S('','Contexto','Por que as regiões polares',`
                                                                                                                                                   <div class="about-layout context-layout">
                                                                                                                                                     <div class="about-text">
-                                                                                                                                                      <p class="rv">O Ártico e a Antártica são regiões importantes para compreender mudanças do clima e dos ecossistemas. O IPCC (Painel Intergovernamental sobre Mudança do Clima, ou Intergovernmental Panel on Climate Change) é o principal órgão científico internacional criado para avaliar a ciência relacionada às mudanças climáticas, avalia que as regiões polares, especialmente o Ártico e a Antártica marítima, estão entre as áreas que experimentam impactos climáticos em magnitudes e ritmos elevados. Entre as mudanças destacadas estão a perda acelerada do gelo marinho no Ártico, o degelo do permafrost e mudanças nos ecossistemas <a href="https://www.ipcc.ch/report/ar6/wg2/chapter/ccp6/" rel="noopener">[1]</a>.</p>
+                                                                                                                                                      <p class="rv">O Ártico e a Antártica são regiões importantes para compreender mudanças do clima e dos ecossistemas. O IPCC (Painel Intergovernamental sobre Mudança do Clima, ou <i>Intergovernmental Panel on Climate Change</i>) é o principal órgão científico internacional criado para avaliar a ciência relacionada às mudanças climáticas, avalia que as regiões polares, especialmente o Ártico e a Antártica marítima, estão entre as áreas que experimentam impactos climáticos em magnitudes e ritmos elevados. Entre as mudanças destacadas estão a perda acelerada do gelo marinho no Ártico, o degelo do permafrost e mudanças nos ecossistemas <a href="https://www.ipcc.ch/report/ar6/wg2/chapter/ccp6/" rel="noopener">[1]</a>.</p>
 
                                                                                                                                                       <p class="rv">A NASA (Administração Nacional da Aeronáutica, ou National Aeronautics and Space Administration) informa, com base em observações de satélite, que os mantos de gelo da Antártica e da Groenlândia vêm perdendo massa; a água resultante contribui para a elevação do nível do mar <a href="https://science.nasa.gov/earth/explore/earth-indicators/ice-sheets/" rel="noopener">[2]</a>. O oceano também exerce influência importante sobre o clima, e medições de longo prazo ajudam pesquisadores a entender mudanças ambientais. A NOAA (Administração Nacional Oceânica e Atmosférica, ou National Oceanic and Atmospheric Administration) destaca a relevância de observações e informações ambientais para compreender transformações no Ártico <a href="https://arctic.noaa.gov/" rel="noopener">[3]</a>.</p>
 
@@ -1636,7 +1701,7 @@ body.expedicao-page #app .tl div:before {
                                                                                                                                                             ${cd('1','Degelo',`
                                                                                                                                                               <div class="about-layout">
                                                                                                                                                                 <div class="about-text">
-                                                                                                                                                                  <p>Os últimos 18 anos registaram os níveis de gelo marinho do Ártico mais baixos da história, uma espiral descendente que continuará, dizem os cientistas. O Ártico estará livre de gelo no verão em algum momento até 2050, mesmo que os humanos parem de produzir poluição climática, de acordo com um relatório da Universidade de Hamburgo. Um exemplo é a passagem noroeste, até 1980 era fechada pelo gelo mesmo no verão, de lá prá cá começou a abrir no verão entre o Atlântico Norte e o Pacífico Norte devido ao aquecimento Global. A desestabilização dos sistemas de circulação oceânica, o derretimento do manto de gelo da Groenlândia, entre outros fatores, são interdependentes e atuariam como um efeito dominó no agravamento climático, levando ao colapso de ecossistemas, à perda de biodiversidade e de serviços ecossistêmicos. Uma vez desencadeado, esse processo levaria a uma temperatura média global muito mais alta do que a dos últimos 1,2 milhões de anos, gerando graves consequências para a humanidade (Steffen et al., 2018; Wunderling et al., 2024).</p>
+                                                                                                                                                                  <p>Os últimos 18 anos registaram os níveis de gelo marinho do Ártico mais baixos da história, uma espiral descendente que continuará, dizem os cientistas. O Ártico estará livre de gelo no verão em algum momento até 2050, mesmo que os humanos parem de produzir poluição climática, de acordo com um relatório da Universidade de Hamburgo. Um exemplo é a passagem noroeste, até 1980 era fechada pelo gelo mesmo no verão, de lá prá cá começou a abrir no verão entre o Atlântico Norte e o Pacífico Norte devido ao Aquecimento Global. A desestabilização dos sistemas de circulação oceânica, o derretimento do manto de gelo da Groenlândia, entre outros fatores, são interdependentes e atuariam como um efeito dominó no agravamento climático, levando ao colapso de ecossistemas, à perda de biodiversidade e de serviços ecossistêmicos. Uma vez desencadeado, esse processo levaria a uma temperatura média global muito mais alta do que a dos últimos 1,2 milhões de anos, gerando graves consequências para a humanidade (Steffen et al., 2018; Wunderling et al., 2024).</p>
                                                                                                                                                                 </div>
                                                                                                                                                                 <div class="about-photo">
                                                                                                                                                                   <img src="assets/images/desgelo.jpg" alt="Degelo no Ártico">
@@ -1647,7 +1712,7 @@ body.expedicao-page #app .tl div:before {
                                                                                                                                                             ${cd('2','Permafrost',`
                                                                                                                                                               <div class="about-layout">
                                                                                                                                                                 <div class="about-text">
-                                                                                                                                                                  <p>65% do Ártico é permafrost (solo congelado, assim encontramos muito carbono armazenado (dióxido de carbono e metano), com o descongelamento devido o aquecimento Global o carbono é liberado agravando ainda mais o aquecimento global. O Ártico está aquecendo de 3 à 4 vezes mais que a média do planeta. Além disso, durante milhares de anos, a paisagem arbustiva da tundra do Ártico armazenou carbono, mas os incêndios florestais e o degelo do permafrost significam que esta região está agora a libertar mais carbono do que armazena.</p>
+                                                                                                                                                                  <p>65% do Ártico é permafrost (solo congelado, assim encontramos muito carbono armazenado (dióxido de carbono e metano), com o descongelamento devido ao aquecimento global o carbono é liberado agravando ainda mais o aquecimento global. O Ártico está aquecendo de 3 à 4 vezes mais que a média do planeta. Além disso, durante milhares de anos, a paisagem arbustiva da tundra do Ártico armazenou carbono, mas os incêndios florestais e o degelo do permafrost significam que esta região está agora a libertar mais carbono do que armazena.</p>
                                                                                                                                                                 </div>
                                                                                                                                                                 <div class="about-photo">
                                                                                                                                                                   <img src="assets/images/permafrost.jpg" alt="Permafrost no Ártico">
